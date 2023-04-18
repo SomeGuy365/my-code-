@@ -12,4 +12,4 @@ def print_board():
         print(rowNum,row)
         rowNum+=1
 
-print_board
+print_board()

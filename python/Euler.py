@@ -14,10 +14,10 @@ count = 0
 width = 20
 height = 20
 
-burgerimg = pygame.image.load(r"C:\Users\ethan\Downloads\burger.jpg")
+burgerimg = pygame.image.load("pics/burger.jpg")
 smaller_burger = pygame.transform.scale(burgerimg,(30,30))
 
-smollyoshi = pygame.image.load(r"C:\Users\ethan\Downloads\perry.png")
+smollyoshi = pygame.image.load("pics/perry.png")
 smollyoshi = pygame.transform.scale(smollyoshi,(width,height))
 
 def destroy():
@@ -105,7 +105,7 @@ while running:
 
     if count == 25:
         smollyoshi.fill(transparent)
-        nuke = pygame.image.load(r"C:\Users\ethan\Downloads\nuke.jpg")
+        nuke = pygame.image.load("pics/nuke.jpg")
         nuke = pygame.transform.scale(nuke,(width,height))
         screen.blit(nuke,(x,y))
         pygame.display.update()

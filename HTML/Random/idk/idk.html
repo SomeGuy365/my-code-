@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+        <link href="idk.css" rel="stylesheet">
+        <title>bruh</title>
+    </head>
+    <body>
+        <script>
+            function mousemove(event) {
+                console.log('pageX:', event.pageX,
+                'pageY:',event.pageY)
+            }
+
+            function onhome() {
+                scrollTo({
+                    top: 0,
+                    left: event.pageX,
+                    behavior:"smooth",
+                })
+            }
+
+            function onpro() {
+                scrollTo({
+                    top: 1570,
+                    left: event.pageX,
+                    behavior:"smooth",
+                })
+            }
+
+            window.addEventListener('mousemove',mousemove)
+        </script>
+
+        <nav>
+            <div class="nav-element1" onclick="onhome()">
+                Home
+            </div>
+            <div class="nav-element2" onclick="onpro()">
+                Projects
+            </div>
+            <div class="nav-element3">
+                About
+            </div>
+            <div class="nav-element4">
+                Contact
+            </div>
+        </nav>
+        <div class="frame">
+            <div class="frame-box">
+                <h1 class="frame-box-header">
+                    Hello
+                </h1>
+                <div>
+                    my name is ethan 
+                </div>
+            </div>
+        </div>
+        <div class="under">
+            <div class="under-frame">
+                <div class="left">
+                    Skills
+                </div>
+                <hr style="height: 80%;margin-top: 45px;">
+                <div class="right">
+                    <ul style="height: 100%;display: flex;flex-direction: column;">
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                        <li class="skill-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="project1">
+                <div class="pro-pic">
+                    pic
+                </div>
+                <div class="pro-text">
+                    <div class="pro-title">
+                        Title
+                    </div>
+                    <div class="pro-skills">
+                        Skills used
+                    </div>
+                </div>
+            </div>
+            <div class="project2">
+                <div class="pro-text">
+                    <div class="pro-title">
+                        Title
+                    </div>
+                    <div class="pro-skills">
+                        Skills used
+                    </div>
+                </div>
+                <div class="pro-pic">
+                    pic
+                </div>
+            </div>
+            <div class="project3">
+                <div class="pro-pic">
+                    pic
+                </div>
+                <div class="pro-text">
+                    <div class="pro-title">
+                        Title
+                    </div>
+                    <div class="pro-skills">
+                        Skills used
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>
