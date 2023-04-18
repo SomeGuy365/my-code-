@@ -1,0 +1,51 @@
+.left-slider{
+    background-color: red;
+    flex-direction: row;
+    width: fit-content;
+    height: 783px;
+    width: 50px;
+    margin-left: 70px;
+    position: fixed;
+    z-index: 50;
+}
+
+body{
+    height: 2750px;
+    margin: 0;
+    transition-delay: scroll;
+    transition-timing-function: ease-in-out;
+    transition-duration: 3s;
+}
+
+.scroll-box{
+    background-color: blue;
+}
+
+.background{
+    background-color: purple;
+    height: 800px;
+    padding-left: 290px;
+}
+
+.background2{
+    background-color: lightblue;
+    height: 800px;
+    padding-left: 290px;
+}
+
+.background3{
+    background-color: purple;
+    height: 800px;
+    padding-left: 290px;
+}
+
+.text1{
+    font-size: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.text2{
+    font-size: 30px;
+    margin-right: 40px;
+}

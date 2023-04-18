@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="spotify.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function restoredefault() {
+            document.getElementById('home-icon').style.opacity = '1'
+            document.getElementById('click-home').style.display = 'none'
+            document.getElementById('search-icon').style.opacity = '1'
+            document.getElementById('click-search').style.display = 'none'
+            document.getElementById('library-icon').style.opacity = '1'
+            document.getElementById('click-library').style.display = 'none'
+
+            document.getElementById('top1').style.color = 'rgb(173,170,170)'
+            document.getElementById('top2').style.color = 'rgb(173,170,170)'
+            document.getElementById('top3').style.color = 'rgb(173,170,170)'
+        }
+
+        function clickonhome() {
+            restoredefault()
+
+            console.log('yay')           
+            document.getElementById('home-icon').style.opacity = '0'
+            document.getElementById('click-home').style.display = 'block'
+
+            document.getElementById('top1').style.color = 'white'
+            document.getElementById('top1').style.fontWeight = '700'
+        }
+
+        function clickonsearch() {
+            restoredefault()
+
+            document.getElementById('search-icon').style.opacity = '0'
+            document.getElementById('click-search').style.display = 'block'
+
+            document.getElementById('top2').style.color = 'white'
+            document.getElementById('top2').style.fontWeight = '700'
+        }
+
+        function clickonlibrary() {
+            restoredefault()
+
+            document.getElementById('library-icon').style.opacity = '0'
+            document.getElementById('click-library').style.display = 'block'
+
+            document.getElementById('top3').style.color = 'white'
+            document.getElementById('top3').style.fontWeight = '700'
+        }
+    </script>
+
+    <div class="taskbar">
+        <div class="top-task" id="top-task">
+            <div class="extra">
+                <img src="pics/ThreeDots.svg">
+            </div>
+            <div class="top1" id="top1" onclick="clickonhome()">
+                <svg id="home-icon"  class="home-icon" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 uPxdw home-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"></path></svg>
+                <svg id="click-home"  class="click-home" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 uPxdw home-active-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path></svg>
+                Home
+            </div>
+            <div class="top2" id="top2" onclick="clickonsearch()">
+                <svg id="search-icon" class="search-icon" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 uPxdw search-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path></svg>
+                <svg id="click-search" class="click-search" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 gQUQL search-active-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path><path d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"></path></svg>
+                Search
+            </div>
+            <div class="top3" id="top3" onclick="clickonlibrary()">
+                <svg id="library-icon" class="library-icon" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 uPxdw collection-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"></path></svg>
+                <svg id="click-library" class="click-library" role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 gQUQL collection-active-icon" viewBox="0 0 24 24" data-encore-id="icon"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path></svg>
+                YourLibrary
+            </div>
+            <div class="top4">
+                <div class="create-border">
+                    <svg class='create-icon' role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 uPxdw"><path d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"></path></svg>
+                </div>
+                Create Playlist
+            </div>
+            <div class="top5">
+                <div class="like-border">
+                    <svg class="like-icon" role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="Svg-sc-ytk21e-0 uPxdw"><path d="M15.724 4.22A4.313 4.313 0 0 0 12.192.814a4.269 4.269 0 0 0-3.622 1.13.837.837 0 0 1-1.14 0 4.272 4.272 0 0 0-6.21 5.855l5.916 7.05a1.128 1.128 0 0 0 1.727 0l5.916-7.05a4.228 4.228 0 0 0 .945-3.577z"></path></svg>
+                </div>
+              
+                Liked Songs
+            </div>
+        </div>
+        <hr style="width: 95%;border-color: rgb(63, 63, 63);margin-bottom: 15px;">
+        <div>
+            <div class="playlist">
+                playlist 1
+            </div>
+            <div class="playlist">
+                playlist 2
+            </div>
+            <div class="playlist">
+                playlist 3
+            </div>
+            <div class="playlist">
+                playlist4
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div class="above">
+            <div class="arrows">
+                <button class="L-arrow">
+                    <svg style="filter: invert(1);"  role="img" height="16" width="16" aria-hidden="true" class="Svg-sc-ytk21e-0 lmlFMn IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16" data-encore-id="icon"><path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg>
+                </button>
+                <button class="R-arrow">
+                    <svg  style="filter: invert(1);" role="img" height="16" width="16" aria-hidden="true" class="Svg-sc-ytk21e-0 lmlFMn IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16" data-encore-id="icon"><path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path></svg>
+                </button>
+            </div>
+            <div class="profile">
+                <div class="inner-profile">
+                    <img class='profile-pic' src="pics/placeholder.png">
+                    <span style="margin-left: 20px;">Ethan</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="showcase">
+            <div class="showcase-img-frame">
+                <img src="pics/placeholder.png" class="showcase-img">
+            </div>
+            <div class="showcase-text">
+                Album<br>
+                <div class="showcase-text-title">Cool song</div>
+                SomeGuy
+                <div class="showcase-text-listen">
+                    Listen now<br>
+                    <button class="showcase-text-listen-play">Play</button>
+                    <button class="showcase-text-listen-save">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="rplayed">
+            Recently Played
+            <div class="song-grid">
+                <div class="song1">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song2">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song3">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song4">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song5">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song6">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song7">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song8">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                        <button class="play">
+                            <svg class="play-icon" role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" class="Svg-sc-ytk21e-0 gQUQL"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rplayed">
+            Recently Played
+            <div class="song-grid">
+                <div class="song1">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song2">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song3">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song4">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song5">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song6">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song7">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+                <div class="song8">
+                    <div class="song-img-frame">
+                        <img src="pics/placeholder.png" class="song-img">
+                    </div>
+                    <div class="song-text">
+                        <span class="song-text-title">Song One</span>
+                        A masterpiece of msuic
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

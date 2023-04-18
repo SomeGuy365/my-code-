@@ -1,0 +1,42 @@
+************************************* Invoked: Tue Mar 21 21:49:29 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c++98, -m64, -Wp,-v, -E, -dM, -x, c++, nul
+[5] Operations sanity check succeeded.
+[19] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[19] Found 0 cached items.
+[19] Language: en-GB
+[19] Script file does not exist.
+************************************* Invoked: Tue Mar 21 21:49:30 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c++98, -m32, -Wp,-v, -E, -dM, -x, c++, nul
+[2] Operations sanity check succeeded.
+[18] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[18] Found 0 cached items.
+[18] Language: en-GB
+[18] Script file does not exist.
+************************************* Invoked: Tue Mar 21 21:49:30 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c++98, -Wp,-v, -E, -dM, -x, c++, nul
+[2] Operations sanity check succeeded.
+[21] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[21] Found 0 cached items.
+[22] Language: en-GB
+[22] Script file does not exist.
+************************************* Invoked: Tue Mar 21 21:49:38 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c17, -m64, -Wp,-v, -E, -dM, -x, c, nul
+[8] Operations sanity check succeeded.
+[23] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[23] Found 0 cached items.
+[24] Language: en-GB
+[24] Script file does not exist.
+************************************* Invoked: Tue Mar 21 21:49:38 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c17, -m32, -Wp,-v, -E, -dM, -x, c, nul
+[2] Operations sanity check succeeded.
+[16] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[16] Found 0 cached items.
+[17] Language: en-GB
+[17] Script file does not exist.
+************************************* Invoked: Tue Mar 21 21:49:38 2023
+[0] Arguments: c:\Users\ethan\Downloads\msys2-x86_64-20230318.exe, -std=c17, -Wp,-v, -E, -dM, -x, c, nul
+[2] Operations sanity check succeeded.
+[19] Using metadata cache from "C:/Users/ethan/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[19] Found 0 cached items.
+[19] Language: en-GB
+[19] Script file does not exist.

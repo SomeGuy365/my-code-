@@ -1,0 +1,203 @@
+*{
+    font-family: poppins;
+    color: white;
+}
+
+.entry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(pics/login-img3.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+img{
+    height: 1000px;
+    max-width: 100%;
+}
+
+.user-input,.pass-input{
+    border: none;
+    border-bottom: solid;
+    border-color: white;
+    border-width: 2px;
+    width: 100%;
+    background:transparent;
+    outline: none;
+    font-size: 15px;
+}
+
+.login-text{
+    display: flex;
+    font-weight: 600;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.border{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 35px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.log-in{
+    width: 300px;
+    height: 40px;
+    font-weight: 600;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.15s;
+    font-size: 18px;
+}
+
+.button-border,.button-border2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.remember{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.checkbox{
+    border: none;
+    margin-top: 4.5px;
+}
+
+.forget{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.forget:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.user,.pass{
+    margin-top: 10px;
+}
+
+.log-in:hover{
+    background-color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#lock{
+    margin-top: 35px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5px;
+    top: 110px;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    border-color: rgba(216, 216, 216, 0.484);
+    width: 44%;
+    float: left;
+    margin-right: 2.5%;
+}
+
+.line2{
+    border-color: rgba(216, 216, 216, 0.484);
+    width: 44%;
+    float: right;
+}
+
+.line-div{
+    color: rgba(216, 216, 216, 0.484);
+    font-size: 14px;
+}
+
+.google,.apple{
+    height: 28px;
+    border-radius: 14px;
+    position: absolute;
+    left: 30px;
+}
+
+.button-border2{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.google-log-in{
+    width: 250px;
+    height: 35px;
+    border-radius: 25px;
+    border: solid;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: white;
+    transition: background-color 0.15s;
+    transition: color 0.15s;
+    color: white;
+    font-size: 14px;
+}
+
+.google-log-in:hover{
+    background-color: rgba(255, 255, 255, 0.456);
+    color: black;
+    cursor: pointer;
+}
+
+.not-mem{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.685);
+    margin-bottom: -25px;
+    margin-top: 25px;
+}
+
+.sign-text{
+    margin-left: 4px;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.sign-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.apple{
+    border-radius: 0;
+}

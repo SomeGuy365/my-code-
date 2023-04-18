@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="menu.css" rel="stylesheet">
+    <title>Epic cool Menu</title>
+</head>
+<body>
+
+    <script>
+        function showinfo(item) {
+            document.getElementById('extra').style.display = 'block'
+            document.getElementById('info-title').innerText = ('')
+            document.getElementById('info-main').innerText = ('')
+            document.getElementById('info-facts').innerText = ('')
+
+            if (item === 'Garlic') {
+                document.getElementById('info-title').append('Garlic bread')
+                document.getElementById('info-main').append('Garlic bread stems from bruschetta,[3][4] which appeared in Italy around the 15th century, and can be traced back to Ancient Rome.[5] Garlic bread originated in the United States and it is a typical Italian-American dish. It probably originated after Italian immigrants started to use butter as a substitute for olive oil, which was uncommon in the United States in the first half of the 20th century.')
+                document.getElementById('info-facts').append('Garlic bread is popularly served as an entree or accompaniment to a main meal, especially with Italian food.Garlic bread was likely brought to America by Italian immigrants, originally as bruschetta, but due to the lack of olive oil and other ingredients, butter was substituted and later adapted to make a different dish.According to Christian mythology garlic grew from Satans left footprint when he left the garden of Eden so apparently Garlic bread is grown from the source of all evil. ')
+            }
+            else if (item === 'cheese') {
+                document.getElementById('info-title').append('Cheese')
+                document.getElementById('info-main').append('tasty cheese')
+                document.getElementById('info-facts').append('its cheesy')
+            }
+        }
+
+        function hideinfo() {
+            console.log('inactive')
+            document.getElementById('extra').style.display = 'none'
+        }
+    </script>
+
+    <div class="frame" id="frame">
+        <div id="extra" class="extra">
+            <div>
+                <button class="exit" onclick="hideinfo()">X</button>
+                <div class="info-title" id="info-title"></div>
+            </div>
+            <div style="display: flex;justify-content: center;font-size: 30px;">History</div>
+            <hr style="width: 80%;border-color: black;">
+            <span id="info-main" class="info-main"></span>
+            <div style="display: flex;justify-content: center;font-size: 30px; margin-top: 40px;">Random info</div>
+            <hr style="width: 80%;border-color: black;">
+            <span id="info-facts" class="info-main"></span>
+        </div>
+        <div class="header">
+            <hr class="head-line">
+            Menu
+            <hr class="head-line">
+        </div>
+        <div class="foodframe">
+            <hr class="between">
+            <div class="starters">
+                <div class="start-food" onclick="showinfo('Garlic')">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+                <div class="start-food" onclick="showinfo('cheese')">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="between">
+            <div class="mains">
+                <div class="main-food">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+                <div class="main-food">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <hr class="between">
+            <div class="deserts">
+                <div class="end-food">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+                <div class="end-food">
+                    <div class="thumb">
+                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                    </div>
+                    <div class="desc">
+                        <span class="title">Garlic Bread</span>
+                        <span class="info">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

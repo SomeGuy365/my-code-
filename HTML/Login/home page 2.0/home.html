@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="home.css" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body onclick="movescreen()">
+        <script>
+            function mousemove(event) {
+                console.log('pageX:', event.pageX,
+                'pageY:',event.pageY)
+
+                if (event.pageY < 800) {
+                    document.getElementById('scroll-box').style.marginTop = ('100px')
+                    document.getElementById('scroll-box').innerText = ('Who')
+                }
+                else if (801 < event.pageY < 1600) {
+                    document.getElementById('scroll-box').style.marginTop = ('200px')
+                    document.getElementById('scroll-box').innerText = ('why')
+                }
+                else if (1601 < event.pageY) {
+                    document.getElementById('scroll-box').style.marginTop = ('300px')
+                    document.getElementById('scroll-box').innerText = ('who')
+                }
+
+                return event.pageX,event.pageY
+            }
+
+            function movescreen() {
+                let x,y = mousemove(event)
+                if (y < 800) {
+                    scrollTo({
+                        top:801,
+                        left:x,
+                        behavior:"smooth",   
+                    })
+                }
+                else if (800<y<1600) {
+                    scrollTo({
+                        top:1601,
+                        left:x,
+                        behavior:"smooth",
+                    })
+                }
+            }
+
+            window.addEventListener('mousemove',mousemove)
+
+        </script>
+
+        <div class="left-slider">
+            <div class="scroll-box" id="scroll-box">
+                Who
+            </div>
+        </div>
+        <div class="background">
+            <div class="text1">
+                Who?
+                <hr style="width: 80%;float: left;margin: 0;">
+            </div>
+            <br>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem vitae quam aliquam pretium.
+                Quisque nisl nibh, facilisis a augue vel, posuere accumsan lorem. Etiam lobortis urna vitae ex pulvinar, eu blandit arcu dapibus.
+                Vivamus fringilla fermentum libero id viverra. Vivamus id enim ut erat pretium congue. Curabitur commodo tellus a tincidunt congue.
+                Phasellus et commodo ligula. Aenean luctus, turpis a molestie cursus, massa augue molestie lectus, non eleifend nunc orci quis justo.
+            </div>
+        </div>
+        <div class="background2">
+            <div class="text1">
+                Why?
+                <hr style="width: 80%;float: left;margin: 0;">
+            </div>
+            <br>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem vitae quam aliquam pretium.
+                Quisque nisl nibh, facilisis a augue vel, posuere accumsan lorem. Etiam lobortis urna vitae ex pulvinar, eu blandit arcu dapibus.
+                Vivamus fringilla fermentum libero id viverra. Vivamus id enim ut erat pretium congue. Curabitur commodo tellus a tincidunt congue.
+                Phasellus et commodo ligula. Aenean luctus, turpis a molestie cursus, massa augue molestie lectus, non eleifend nunc orci quis justo.
+            </div>
+        </div>
+        <div class="background3">
+            <div class="text1">
+                Why?
+                <hr style="width: 80%;float: left;margin: 0;">
+            </div>
+            <br>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem vitae quam aliquam pretium.
+                Quisque nisl nibh, facilisis a augue vel, posuere accumsan lorem. Etiam lobortis urna vitae ex pulvinar, eu blandit arcu dapibus.
+                Vivamus fringilla fermentum libero id viverra. Vivamus id enim ut erat pretium congue. Curabitur commodo tellus a tincidunt congue.
+                Phasellus et commodo ligula. Aenean luctus, turpis a molestie cursus, massa augue molestie lectus, non eleifend nunc orci quis justo.
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+*{
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.center-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    flex-direction: column;
+}
+
+.logo{
+    background-color: transparent;
+    margin-bottom: 27px;
+}
+
+.inp{
+    width: 459px;
+    height: 42px;
+    padding-left: 52px;
+    padding-right: 50px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.search{
+    position: relative;
+}
+
+.searchicon{
+    position: absolute;
+    left: 12px;
+    top: 10.5px;
+}
+
+.voice{
+    position: absolute;
+    right: 12px;
+    top: 10.5px;
+}
+
+body{
+    background-image: url(pics/background4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.icons{
+    width: 448px;
+    height: 112px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.inbox{
+    flex: 1;
+    border-radius: 10px;
+}
+
+.extensions{
+    flex: 1;
+    border-radius: 10px;
+}
+
+.youtube{
+    flex: 1;
+    border-radius: 10px;
+}
+
+.add{
+    flex: 1;
+    border-radius: 10px;
+}
+
+.inbox,.extensions,.youtube,.add{
+    transition: background-color 0.15s;
+}
+
+.inbox:hover,.extensions:hover,.youtube:hover,.add:hover{
+    background-color: rgba(157, 157, 157, 0.251);
+}
+
+.wording{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 8px;
+    height: 36px;
+    font-weight: 400;
+}
+
+.icon{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-left: 32px;
+    margin-top: 18px;
+    border-radius: 24px;
+}
+
+.topright{
+    float: right;
+    width: 211px;
+    height: 48px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    color: white;
+}
+
+.top-icon1,.top-icon2,.top-icon3,.top-icon4{
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.under-text{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.under-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    padding: 6px;
+    border-radius: 22px;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 300,
+    'GRAD' 100,
+    'opsz' 24
+}
+
+.profile{
+    border-radius: 24px;
+}
+
+.top-icon4{
+    width: 40px;
+    margin-left: -5px;
+}
+
+.top-icon3{
+    width: 42px;
+}
+
+.material-symbols-outlined:hover{
+    background-color: rgba(128, 128, 128, 0.156);
+    cursor: pointer;
+}
+
+.profile:hover{
+    cursor: pointer;
+}
+
+.bottom-text{
+    position: absolute;
+    width: 96%;
+    bottom: -90px;
+    left: 15px;
+    right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-text1,.footer-text2{
+    flex: 1;
+}
+
+.footer-text1{
+    display: flex;
+    gap: 5px;
+}
+
+.link-img{
+    align-items: center;
+    height: 16px;
+}
+
+
+.link-text{
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.link-text:hover{
+    cursor: pointer;
+}
+
+.footer-text2{
+    text-align: right;
+}
+
+.custom-button{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.custom-button:hover{
+    background-color: rgba(91, 91, 91, 0.482);
+}
+
+.custom-img{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    color: white;
+    filter: invert(1);
+}

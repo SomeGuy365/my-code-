@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+        <title>Login page</title>
+        <link href="login.css" rel="stylesheet">
+        <link src="login.js" rel="script">
+    </head>
+    <body>
+        <script>
+            const user = 'ethan'
+            const pass = 'denton'
+
+            function checkimp() {
+                let userimp = document.getElementById('user-imp')
+                userimp = userimp.value
+
+                let passimp = document.getElementById('pass-imp')
+                passimp = passimp.value
+
+                if (userimp === user) {
+                    console.log('yay')
+                    if (passimp === pass) {
+                        console.log('complete')
+                        window.location = 'https://youtube.com'
+                    }
+                } else {
+                    console.log('aww')
+                }
+                
+                console.log(userimp,passimp)
+            }
+
+
+        </script>
+        <div class="entry">
+            <div class="border">
+                <div class="login-text">
+                    Login
+                </div>
+                <div class="user">
+                    Username:
+                    <input type="text" class="user-input" id="user-imp">
+                </div>
+                <div class="pass">
+                    Password:
+                    <input type="password" class="pass-input" id="pass-imp">
+                </div>
+                <div class="icons">
+                    <span class="material-symbols-outlined" id="person">
+                        person
+                    </span>
+                    <span class="material-symbols-outlined" id="lock">
+                        lock
+                    </span>
+                </div>
+                <div class="remember">
+                    Remember Me?
+                    <input type="checkbox" class="checkbox">
+                </div>
+                <div class="button-border">
+                    <button class="log-in" onclick="checkimp();">Log In</button>
+                </div>
+                <div class="forget">
+                    Forgot Password?
+                </div>
+                <div class="line-div">
+                    <hr class="line">
+                    or
+                    <hr class="line2">
+                </div>
+                <div class="button-border2">
+                    <img src="pics/googlelogo2.png" class="google">
+                    <button class="google-log-in">Log In With Google</button>
+                </div>
+                <div class="button-border2">
+                    <img src="pics/apple3.png" class="apple">
+                    <button class="google-log-in">Log In With Apple</button>
+                </div>
+                <div class="button-border2">
+                    <img src="pics/facebook1.png" class="google">
+                    <button class="google-log-in">Log In With Facebook</button>
+                </div>
+                <div class="not-mem">
+                    Not A Member Yet?
+                    <span class="sign-text">Sign Up!</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
