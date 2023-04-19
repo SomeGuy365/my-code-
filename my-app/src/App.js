@@ -13,12 +13,20 @@ function App() {
 
     return (
       <div className="App">
-        <h1 onClick={onclick}>bruh</h1>
-        <ul>
-          <li>one</li>
-          <li>two</li>
-          <li>three</li>
-        </ul>
+        <nav className='navbar'>
+          <div onClick={onclick}>
+            home
+          </div>
+          <div>
+            podcasts
+          </div>
+          <div>
+            for you
+          </div>
+          <div>
+            library
+          </div>
+        </nav>
       </div>
     );
 }
