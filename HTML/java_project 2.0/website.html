@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="website.css" rel="stylesheet">
+    <title>website</title>
+</head>
+<body>
+    <script>
+        let cart = 0
+
+        function clickcart(){
+            cart += 1
+            document.getElementById('cartnum').innerText = cart
+        }
+    </script>
+
+    <nav class="navbar">
+        <button class="navelement1">
+            Logo
+        </button>
+        <button class="navelement2">
+            Search bar
+        </button>
+        <button class="navelement3">
+            Returns/orders
+        </button>
+        <button class="navelement4" onclick="clickcart()">
+            <span id="cartnum">0</span><br>
+            Cart
+        </button>
+    </nav>
+</body>
+</html>

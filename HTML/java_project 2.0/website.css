@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navelement1{
+    width: 112px;
+}
+
+.navelement2{
+    width: 420px;
+}
+
+.navelement3{
+    width: 72px;
+}
+
+.navelement4{
+    width: 84px;
+}
