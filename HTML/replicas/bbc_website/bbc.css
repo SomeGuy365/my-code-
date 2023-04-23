@@ -1,4 +1,7 @@
-
+body{
+    margin: none;
+    padding: none;
+}
 
 nav{
     background-color: rgb(255, 255, 255);
@@ -10,6 +13,7 @@ nav{
     height: 64px;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .hsection1{
@@ -28,11 +32,17 @@ nav{
 }
 
 .leftelem2{
-    width: 176px;
+    width: 28px;
+}
+
+.leftelem2-2{
+    width: 148px;
+    font-weight: bold;
 }
 
 .leftelem3{
-    width: 60px;
+    width: 48px;
+    height: 64px;
 }
 
 .hsection2{
@@ -42,6 +52,42 @@ nav{
     align-items: center;
 }
 
+
 .hsection2 > div{
-    flex: 1;
+    margin-right: 30px;
+}
+
+.rightelem1{
+    width: 48px;
+    border-left: solid;
+    border-color: rgb(235, 235, 235);
+    padding-left: 8px;
+    margin-left: 8px;
+}
+.rightelem2{
+    width: 59.75px;
+}
+.rightelem3{
+    width: 60.63px;
+}
+.rightelem4{
+    width: 78.5px;
+}
+.rightelem5{
+    width: 69.8px;
+}
+.rightelem6{
+    width: 71.4px;
+}
+.rightelem7{
+    width: 74.2px;
+}
+
+.rightelem9{
+    background-color: rgb(232, 229, 229);
+    width: 180px;
+    height: 16px;
+    padding: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
