@@ -1,15 +1,15 @@
 body{
     margin: 0;
     padding: 0;
+    height: 300vh;
+    background-color: rgb(246, 246, 246);
 }
 
 nav{
     background-color: rgb(255, 255, 255);
     display: flex;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: 119px;
-    margin-right: 119px;
+    padding-left: 135px;
+    padding-right: 135px;
     height: 64px;
     align-items: center;
     justify-content: center;
@@ -101,4 +101,40 @@ nav{
     padding-left: 104px;
     padding-top: 10px;
     background-color: rgb(255, 255, 255);
+    height: 64px;
+}
+
+.main,.genre{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-left: 119px;
+    margin-right: 119px;
+    margin-top: 20px;
+}
+
+.main-content1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#main-content1{
+    height: 566px;
+}
+
+.main > div{
+    background-color: red;
+    height: 276px;
+}
+
+.main-full{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.genre{
+    background-color: blue;
+    height: 276px;
 }
