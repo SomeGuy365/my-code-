@@ -1,6 +1,7 @@
 import pygame
 import random
 import sys
+import pygame.freetype
 
 from pygame.locals import (
     K_UP,
@@ -33,10 +34,13 @@ pressed_left = False
 pressed_down = False
 
 velocity = 0.15
+score = 0
 
+GAME_FONT = pygame.freetype.SysFont('arial',25)
 
 while running:
     screen.fill((255,255,255))
+    GAME_FONT.render_to(screen, (20, 20,20,20), "Score:"+str(score), (0, 0, 0))
     rect_play = pygame.Rect(x,y,20,20)
     rect_toptube = pygame.Rect(xx,0,60,y1)
     rect_bottomtube = pygame.Rect(xx,y2,60,SCREEN_HIGHT-y2)
@@ -60,6 +64,7 @@ while running:
         y1 = random.randint(200,SCREEN_HIGHT-400)
         y2 = y1 + 150
         xx = SCREEN_WIDTH
+        score += 1
 
         rect_toptube = pygame.Rect(xx,0,60,y1)
         rect_bottomtube = pygame.Rect(xx,y2,60,SCREEN_HIGHT-y2)
@@ -72,6 +77,7 @@ while running:
             print('dedtube')
             pygame.time.delay(5)
             running = False
+
 
     y += velocity
     velocity += 0.0005

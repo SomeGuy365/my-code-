@@ -14,11 +14,11 @@ count = 0
 width = 20
 height = 20
 
-burgerimg = pygame.image.load("pics/burger.jpg")
-smaller_burger = pygame.transform.scale(burgerimg,(30,30))
+#burgerimg = pygame.image.load("pics/burger.jpg")
+#smaller_burger = pygame.transform.scale(burgerimg,(30,30))
 
-smollyoshi = pygame.image.load("pics/perry.png")
-smollyoshi = pygame.transform.scale(smollyoshi,(width,height))
+#smollyoshi = pygame.image.load("pics/perry.png")
+#smollyoshi = pygame.transform.scale(smollyoshi,(width,height))
 
 def destroy():
     pygame.time.delay(5000)
@@ -61,9 +61,9 @@ while running:
     rect_play = pygame.Rect(x,y,width,height)
     pygame.draw.rect(screen,(0,0,0),rect_play)
     pygame.draw.rect(screen,(52, 189, 235),rect_ran)
-    GAME_FONT.render_to(screen, (20, 20), "Count:"+str(count), (0, 0, 0))
-    screen.blit(smaller_burger,(xx,yy))
-    screen.blit(smollyoshi,(x,y))
+    GAME_FONT.render_to(screen, (20, 20,20,20), "Count:"+str(count), (0, 0, 0))
+    #screen.blit(smaller_burger,(xx,yy))
+    #screen.blit(smollyoshi,(x,y))
     for event in pygame.event.get():
         if event.type == QUIT:
                  running = False
@@ -98,13 +98,13 @@ while running:
     if rect_play.colliderect( rect_ran ):
         width += 5
         height += 5
-        smollyoshi = pygame.transform.scale(smollyoshi,(width,height))
+        #smollyoshi = pygame.transform.scale(smollyoshi,(width,height))
         count += 1
         xx = random.randint(0,SCREEN_WIDTH)
         yy = random.randint(0,SCREEN_HIGHT)
 
     if count == 25:
-        smollyoshi.fill(transparent)
+        #smollyoshi.fill(transparent)
         nuke = pygame.image.load("pics/nuke.jpg")
         nuke = pygame.transform.scale(nuke,(width,height))
         screen.blit(nuke,(x,y))
