@@ -23,8 +23,8 @@ running = True
 x = SCREEN_WIDTH/2
 y = 250
 
-y1 = random.randint(1,SCREEN_HIGHT)
-y2 = y1 + 150
+y1 = random.randint(1,SCREEN_HIGHT-80)
+y2 = y1 + 250
 
 xx = SCREEN_WIDTH-50
 
@@ -38,15 +38,28 @@ score = 0
 
 GAME_FONT = pygame.freetype.SysFont('arial',25)
 
+spriteplay = pygame.image.load('C:\\Users\\ethan\\.vscode\\cool\\python\\flappy-bird-1.png.png')
+spriteplay = pygame.transform.scale(spriteplay,(100,100))
+
+bg_img = pygame.image.load('C:\\Users\\ethan\\.vscode\\cool\\python\\flappy-backdrop4.png') 
+bg_img = pygame.transform.scale(bg_img,(SCREEN_WIDTH,SCREEN_HIGHT))
+
 while running:
-    screen.fill((255,255,255))
+    screen.blit(bg_img,(0,0))
     GAME_FONT.render_to(screen, (20, 20,20,20), "Score:"+str(score), (0, 0, 0))
     rect_play = pygame.Rect(x,y,20,20)
     rect_toptube = pygame.Rect(xx,0,60,y1)
     rect_bottomtube = pygame.Rect(xx,y2,60,SCREEN_HIGHT-y2)
-    pygame.draw.rect(screen,(0,0,0),rect_play)
-    pygame.draw.rect(screen,(10,10,10),rect_toptube)
-    pygame.draw.rect(screen,(10,10,10),rect_bottomtube)
+    rect_tubepart = pygame.Rect(xx-10,y1,80,30)
+    rect_tubepart2 = pygame.Rect(xx-10,y2,80,30)
+    rect_ground = pygame.Rect(0,SCREEN_HIGHT-40,SCREEN_WIDTH,80)
+    #pygame.draw.rect(screen,(0,0,0),rect_play)
+    screen.blit(spriteplay,(x,y))
+    pygame.draw.rect(screen,(50,168,82),rect_toptube)
+    pygame.draw.rect(screen,(50,168,82),rect_bottomtube)
+    pygame.draw.rect(screen,(50,168,82),rect_tubepart)
+    pygame.draw.rect(screen,(50,168,82),rect_tubepart2)
+    pygame.draw.rect(screen,(252,165,3),rect_ground)
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
@@ -61,8 +74,11 @@ while running:
                 pressed_up = False
 
     if xx < -60:
-        y1 = random.randint(200,SCREEN_HIGHT-400)
-        y2 = y1 + 150
+        y1 = random.randint(1,SCREEN_HIGHT-160)
+        y2 = y1 + 250
+        while y2 < SCREEN_HIGHT-200:
+            y1 = random.randint(1,SCREEN_HIGHT-160)
+            y2 = y1 + 250
         xx = SCREEN_WIDTH
         score += 1
 
