@@ -19,6 +19,12 @@ body{
     }
 }
 
+@media (min-width:1000px) {
+    .extra{
+        margin-left: 55px;
+    }
+}
+
 .header{
     font-size: 150px;
     display: flex;
@@ -52,9 +58,11 @@ body{
 .start-food{
     border: solid;
     border-radius: 10px;
+    border-color: rgb(207, 207, 207);
     height: 266px;
     margin: 5px;
     width: 50%;
+    text-align: center;
 }
 
 .start-food:hover{
@@ -102,6 +110,7 @@ body{
     height: 266px;
     margin: 5px;
     width: 50%;
+    text-align: center;
 }
 
 .deserts{
@@ -115,6 +124,7 @@ body{
     height: 266px;
     margin: 5px;
     width: 50%;
+    text-align: center;
 }
 
 .moreinfo{
@@ -129,11 +139,14 @@ body{
     display: none;
     z-index: 50;
     position: absolute;
-    height: 67%;
+    height: fit-content;
+    border-radius: 10px;
     width: 660px;
-    left: 70px;
+    left: 0px;
     top: 500px;
     text-align: center;
+    padding: 20px;
+    padding-bottom: 280px;
 }
 
 .exit{

@@ -10,6 +10,15 @@
 <body>
 
     <script>
+        function movescreen() {
+                scrollTo({
+                        top:450,
+                        left:50,
+                        behavior:"smooth",   
+                })
+            }
+
+
         function showinfo(item) {
             document.getElementById('extra').style.display = 'block'
             document.getElementById('info-title').innerText = ('')
@@ -18,14 +27,16 @@
 
             if (item === 'Garlic') {
                 document.getElementById('info-title').append('Garlic bread')
-                document.getElementById('info-main').append('Garlic bread stems from bruschetta,[3][4] which appeared in Italy around the 15th century, and can be traced back to Ancient Rome.[5] Garlic bread originated in the United States and it is a typical Italian-American dish. It probably originated after Italian immigrants started to use butter as a substitute for olive oil, which was uncommon in the United States in the first half of the 20th century.')
-                document.getElementById('info-facts').append('Garlic bread is popularly served as an entree or accompaniment to a main meal, especially with Italian food.Garlic bread was likely brought to America by Italian immigrants, originally as bruschetta, but due to the lack of olive oil and other ingredients, butter was substituted and later adapted to make a different dish.According to Christian mythology garlic grew from Satans left footprint when he left the garden of Eden so apparently Garlic bread is grown from the source of all evil. ')
+                document.getElementById('info-main').append('2 ciabatta loaves,140g butter(softened),4-6 garlic cloves(crushed),handful parsley(chopped),2tbsp finely grated parmesan')
+                document.getElementById('info-facts').append('Slice the bread in half lengthwise. Toast the crust side for 2 mins until really crispy. Mix together butter, garlic and parsley in a bowl. Spread over the cut bread halves. Sprinkle over the Parmesan. Just before serving place on a baking sheet, then cook under a hot grill for 5 mins until toasty and lightly golden. Let it cool for 1 min before cutting into thick slices.')
             }
             else if (item === 'cheese') {
                 document.getElementById('info-title').append('Cheese')
                 document.getElementById('info-main').append('tasty cheese')
                 document.getElementById('info-facts').append('its cheesy')
             }
+
+            movescreen()
         }
 
         function hideinfo() {
@@ -40,10 +51,10 @@
                 <button class="exit" onclick="hideinfo()">X</button>
                 <div class="info-title" id="info-title"></div>
             </div>
-            <div style="display: flex;justify-content: center;font-size: 30px;">History</div>
+            <div style="display: flex;justify-content: center;font-size: 30px;">ingredients</div>
             <hr style="width: 80%;border-color: black;">
             <span id="info-main" class="info-main"></span>
-            <div style="display: flex;justify-content: center;font-size: 30px; margin-top: 40px;">Random info</div>
+            <div style="display: flex;justify-content: center;font-size: 30px; margin-top: 40px;">Recipe</div>
             <hr style="width: 80%;border-color: black;">
             <span id="info-facts" class="info-main"></span>
         </div>
@@ -62,8 +73,7 @@
                     <div class="desc">
                         <span class="title">Garlic Bread</span>
                         <span class="info">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                            Garlic bread consists of bread(usualy a baguette, sour dough, or a cibatta) topped with garlic and olive oil.<hr style="margin-bottom: 0px;width: 80%;">£10.50
                         </span>
                     </div>
                 </div>
@@ -74,8 +84,7 @@
                     <div class="desc">
                         <span class="title">Garlic Bread</span>
                         <span class="info">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                            Praesent feugiat quis nisi ut ullamcorper.<br> Sed suscipit pulvinar cursus. 
+                            (overview) diatery requirements and stuff.<br>£PRICE
                         </span>
                     </div>
                 </div>
