@@ -19,9 +19,11 @@ body{
     }
 }
 
-@media (min-width:1000px) {
-    .extra{
-        margin-left: 55px;
+@media (min-width:1600px) {
+    .frame{
+        margin: 0;
+        margin-left: 500px;
+        margin-right: 500px;
     }
 }
 
@@ -63,6 +65,15 @@ body{
     margin: 5px;
     width: 50%;
     text-align: center;
+    position: relative;;
+}
+
+.veg-pic{
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    left: 0px;
+    bottom: 5px;
 }
 
 .start-food:hover{
@@ -71,8 +82,10 @@ body{
 
 .thumb{
     height: 50%;
+    width: 90%;
     border-radius: 10px;
     margin: 2px;
+    margin-left: 5%;
 }
 
 .pic{
@@ -135,18 +148,20 @@ body{
 }
 
 .extra{
-    background-color: purple;
+    background-color: rgb(255, 255, 255);
     display: none;
     z-index: 50;
     position: absolute;
     height: fit-content;
     border-radius: 10px;
     width: 660px;
-    left: 0px;
+    left: 10%;
     top: 500px;
     text-align: center;
     padding: 20px;
     padding-bottom: 280px;
+    border: solid;
+    color: rgb(70, 70, 70);
 }
 
 .exit{
