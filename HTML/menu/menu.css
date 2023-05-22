@@ -1,10 +1,11 @@
 body{
-    background-color: blue;
+    background-color: rgb(70, 78, 46);
     height: 1300px;
+    color: rgb(70, 70, 70);
 }
 
 .frame{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: 20px;
     height: 85%;
     border-radius: 5px;
@@ -35,7 +36,7 @@ body{
 }
 
 .head-line{
-    border-color: red;
+    border-color: rgb(70, 78, 46);
     width: 20%;
     height: 0;
 }
@@ -60,7 +61,7 @@ body{
 .start-food{
     border: solid;
     border-radius: 10px;
-    border-color: rgb(207, 207, 207);
+    border-color: rgb(172, 185, 146);
     height: 266px;
     margin: 5px;
     width: 50%;
@@ -120,6 +121,7 @@ body{
 .main-food{
     border: solid;
     border-radius: 10px;
+    border-color: rgb(172, 185, 146);
     height: 266px;
     margin: 5px;
     width: 50%;
@@ -134,6 +136,7 @@ body{
 .end-food{
     border: solid;
     border-radius: 10px;
+    border-color: rgb(172, 185, 146);
     height: 266px;
     margin: 5px;
     width: 50%;
@@ -165,8 +168,10 @@ body{
 }
 
 .exit{
-    background-color: blue;
+    background-color: rgb(233, 229, 214);
     float: right;
+    border-radius: 4px;
+    border-width: 1px;
 }
 
 .exit:hover{

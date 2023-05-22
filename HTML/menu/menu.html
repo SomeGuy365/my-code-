@@ -31,9 +31,13 @@
                 document.getElementById('info-facts').append('Slice the bread in half lengthwise. Toast the crust side for 2 mins until really crispy. Mix together butter, garlic and parsley in a bowl. Spread over the cut bread halves. Sprinkle over the Parmesan. Just before serving place on a baking sheet, then cook under a hot grill for 5 mins until toasty and lightly golden. Let it cool for 1 min before cutting into thick slices.')
             }
             else if (item === 'cheese') {
-                document.getElementById('info-title').append('Cheese')
-                document.getElementById('info-main').append('tasty cheese')
-                document.getElementById('info-facts').append('its cheesy')
+                document.getElementById('info-title').append('Fondue')
+                document.getElementById('info-main').append('1 clove garlic halved,290ml/½ pint white wine,1 tsp lemon juice,225g/8oz emmental cheese grated,225g/8oz gruyère cheese grated,1 tsp cornflour1,tbsp kirsch (optional),cubed bread pieces, for dipping')
+                document.getElementById('info-facts').append('1.Rub the inside of the fondue pot with the halves of garlic2.Add the wine and lemon juice to the pot and heat until boiling. Lower the heat and gradually stir in the cheeses until melted, stirring all the time3.If using kirsch, blend with the cornflour, otherwise use water. Add to the cheese mixture and cook gently until the mixture is smooth - dont let it boil or it will burn4.Using the fondue prongs, dip the bread cubes into the cheese and serve.')
+                const steps = document.createElement('div')
+                steps.style = 'padding-bottom:5px;'
+                document.getElementById('info-facts').appendChild(steps)
+                document.getElementById('info-facts').append('yatyayay')
             }
 
             movescreen()
@@ -51,7 +55,7 @@
                 <button class="exit" onclick="hideinfo()">X</button>
                 <div class="info-title" id="info-title"></div>
             </div>
-            <div style="display: flex;justify-content: center;font-size: 30px;">ingredients</div>
+            <div style="display: flex;justify-content: center;font-size: 30px;">Ingredients</div>
             <hr style="width: 80%;border-color: black;">
             <span id="info-main" class="info-main"></span>
             <div style="display: flex;justify-content: center;font-size: 30px; margin-top: 40px;">Recipe</div>
@@ -80,12 +84,12 @@
                 </div>
                 <div class="start-food" onclick="showinfo('cheese')">
                     <div class="thumb">
-                        <img src="menu-pics/garlicbread.jpeg" class="pic">
+                        <img src="menu-pics/fondue pic.jfif" class="pic">
                     </div>
                     <div class="desc">
-                        <span class="title">Garlic Bread</span>
+                        <span class="title">Fondue</span>
                         <span class="info">
-                            (overview) diatery requirements and stuff.<br>£PRICE
+                            Fondue is a melted cheese dish served in a big pot over a portable stove, and eaten by dipping bread into the cheese.<hr style="margin-bottom: 0px;width: 50%;">£10.50
                         </span>
                     </div>
                 </div>
