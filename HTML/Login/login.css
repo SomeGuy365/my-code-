@@ -83,6 +83,8 @@ img{
 .checkbox{
     border: none;
     margin-top: 4.5px;
+    width: 18.5px;
+    height: 16.5px;
 }
 
 .forget{
@@ -200,4 +202,5 @@ img{
 
 .apple{
     border-radius: 0;
+    margin-bottom: 3px;
 }
