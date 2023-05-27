@@ -3,11 +3,35 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Axios from 'axios';
+import { useEffect, useState} from 'react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let incorr = ''
+let quote = ''
 
-function onclick(){
+function Onclick(){
+  const home = (<div>
+
+    <nav className='nav-bar'>
+      <div>
+        Home
+      </div>
+      <div>
+        About
+      </div>
+      <div>
+        Projects
+      </div>
+      <div>
+        Contact
+      </div>
+    </nav>
+    <div>
+      {}
+    </div>
+  </div>)
+
   let userfield = document.getElementById('user-imp')
   let userfield2 = userfield.value
 
@@ -17,26 +41,10 @@ function onclick(){
   console.log(userfield2)
   if (userfield2 === JSON.parse(localStorage.getItem('user'))) {
     if (passfield2 === JSON.parse(localStorage.getItem('pass'))) {
-      root.render(
-        <div>
-
-          <nav className='nav-bar'>
-            <div>
-              Home
-            </div>
-            <div>
-              About
-            </div>
-            <div>
-              Projects
-            </div>
-            <div>
-              Contact
-            </div>
-          </nav>
-
-        </div>
-      )
+      Axios.get('https://api.quotable.io/random').then((res)=>{
+        console.log(res.data.content)
+        Render(home)
+      })
     }
   }
 }
@@ -83,7 +91,7 @@ const login = (
       Pass:
       <input type='text' className='pass-imp' id='pass-imp' defaultValue={''}/>
     </div>
-    <button onClick={onclick} className='login-but'>Login</button>
+    <button onClick={Onclick} className='login-but'>Login</button>
     <div className='forget'>
       Forgot password?
       <button onClick={savenew}>Save new</button>
