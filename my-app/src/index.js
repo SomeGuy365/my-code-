@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let incorr = ''
 
 function onclick(){
   let userfield = document.getElementById('user-imp')
@@ -18,7 +19,22 @@ function onclick(){
     if (passfield2 === JSON.parse(localStorage.getItem('pass'))) {
       root.render(
         <div>
-          home
+
+          <nav className='nav-bar'>
+            <div>
+              Home
+            </div>
+            <div>
+              About
+            </div>
+            <div>
+              Projects
+            </div>
+            <div>
+              Contact
+            </div>
+          </nav>
+
         </div>
       )
     }
@@ -69,7 +85,8 @@ const login = (
     </div>
     <button onClick={onclick} className='login-but'>Login</button>
     <div className='forget'>
-      Forgot password?<button onClick={savenew}>Save new</button>
+      Forgot password?
+      <button onClick={savenew}>Save new</button>
     </div>
   </div>
 )
