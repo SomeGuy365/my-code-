@@ -27,8 +27,14 @@ function Onclick(){
         Contact
       </div>
     </nav>
-    <div>
-      {}
+
+    <div className='border'>
+      <div className='quote'>
+        'Cool quote'<br />Author
+      </div>
+    </div>
+    <div className='info-one'>
+      info:)
     </div>
   </div>)
 
