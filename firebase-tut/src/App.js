@@ -63,10 +63,10 @@ function App() {
         Pass:
         <input onChange={(event) => {setLoginpass(event.target.value)}}/>
       </div>
-      <button onClick={login}>
+      <button>
         Login
       </button><br />
-      {user?.email}
+      {loginEmail}
       <button onClick={logout}>
         Sign out
       </button>
