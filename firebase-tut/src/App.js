@@ -45,7 +45,7 @@ function App() {
       Create
       <div>
         User:
-        <input onChange={(event) => {setRegisteremail(event.target.value)}}/>
+        <input onChange={(event) => {setRegisteremail(event.target.value)}} type='text' placeholder='cool'/>
       </div>
       <div>
         Pass:
