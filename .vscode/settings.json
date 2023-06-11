@@ -2,6 +2,7 @@
     "python.analysis.typeCheckingMode": "basic",
     "liveServer.settings.port": 5501,
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
