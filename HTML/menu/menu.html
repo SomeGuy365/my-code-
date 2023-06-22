@@ -31,13 +31,17 @@
                 document.getElementById('info-facts').append('Slice the bread in half lengthwise. Toast the crust side for 2 mins until really crispy. Mix together butter, garlic and parsley in a bowl. Spread over the cut bread halves. Sprinkle over the Parmesan. Just before serving place on a baking sheet, then cook under a hot grill for 5 mins until toasty and lightly golden. Let it cool for 1 min before cutting into thick slices.')
             }
             else if (item === 'cheese') {
-                document.getElementById('info-title').append('Fondue')
-                document.getElementById('info-main').append('1 clove garlic halved,290ml/½ pint white wine,1 tsp lemon juice,225g/8oz emmental cheese grated,225g/8oz gruyère cheese grated,1 tsp cornflour1,tbsp kirsch (optional),cubed bread pieces, for dipping')
-                document.getElementById('info-facts').append('1.Rub the inside of the fondue pot with the halves of garlic2.Add the wine and lemon juice to the pot and heat until boiling. Lower the heat and gradually stir in the cheeses until melted, stirring all the time3.If using kirsch, blend with the cornflour, otherwise use water. Add to the cheese mixture and cook gently until the mixture is smooth - dont let it boil or it will burn4.Using the fondue prongs, dip the bread cubes into the cheese and serve.')
+                document.getElementById('info-title').append('Spagheti carbonara')
+                document.getElementById('info-main').append('100g pancetta, 50g pecorino cheese, 50g parmesan, 3 large eggs, 350g spaghetti, 2 plump garlic cloves peeled and left whole, 50g unsalted butter, sea salt and freshly ground black pepper')
+                document.getElementById('info-facts').append('STEP 1:Put a large saucepan of water on to boil.')
                 const steps = document.createElement('div')
+                const steps2 = document.createElement('div')
                 steps.style = 'padding-bottom:5px;'
+                steps2.style = 'padding-bottom:5px'
                 document.getElementById('info-facts').appendChild(steps)
-                document.getElementById('info-facts').append('yatyayay')
+                document.getElementById('info-facts').append('STEP 2:Finely chop the 100g pancetta, having first removed any rind. Finely grate 50g pecorino cheese and 50g parmesan and mix them together.')
+                document.getElementById('info-facts').appendChild(steps2)
+                document.getElementById('info-facts').append('STEP 3:Beat the 3 large eggs in a medium bowl and season with a little freshly grated black pepper. Set everything aside.')
             }
 
             movescreen()
@@ -87,7 +91,7 @@
                         <img src="menu-pics/fondue pic.jfif" class="pic">
                     </div>
                     <div class="desc">
-                        <span class="title">Fondue</span>
+                        <span class="title">Carbonara</span>
                         <span class="info">
                             Fondue is a melted cheese dish served in a big pot over a portable stove, and eaten by dipping bread into the cheese.<hr style="margin-bottom: 0px;width: 50%;">£10.50
                         </span>
