@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.nav-bar{
+    border-color: red;
+    height: 100vh;
+    width: 85px;
+    background-color: black;
+    position: fixed;
+}
+
+.home,.home2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 5px;
+}
+
+.home{
+    aspect-ratio: 1/2;
+    margin-top: 0;
+}
+
+.home2{
+    height: 78%;
+}
+
+.homeicon{
+    display: block;
+    width: 80%;
+    margin-bottom: 40%;
+    margin-left: 10%;
+}
+
+.searchicon{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+}
+
+
+.home > img{
+    width: 50%;
+    height: 50%;
+}
+
+.showcase{
+    background: rgb(119,0,255);
+    background: linear-gradient(145deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
+    margin-top: 1%;
+    margin-left: 100px;
+    margin-right: 15px;
+    height: 250px;
+    border-radius: 10px;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.overview{
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-left: 100px;
+    margin-right: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.682);
+}
