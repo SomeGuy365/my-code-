@@ -1,5 +1,6 @@
 import pygame
 import random
+import time
 from pygame.locals import (
     K_UP,
     K_DOWN,
@@ -40,9 +41,17 @@ class Enemy:
 
 pressed = ''
 level = 0
-time = 0
+time1 = 0
 
 GAME_FONT = pygame.freetype.SysFont('arial',25)
+DEAD_FONT = pygame.freetype.SysFont('arial',70)
+
+def bedead():
+    DEAD_FONT.render_to(screen, (20, 20,20,20), "UR DEAD!", (255, 255, 255))
+    time.sleep(2)
+    pygame.quit()
+    quit()
+
 
 while running:
     screen.fill((0,0,0))
@@ -51,14 +60,14 @@ while running:
     pygame.draw.rect(screen,(200,200,200),rect_play)
     for event in pygame.event.get():
         if event.type == QUIT:
-                 running = False
+                running = False
         if event.type == KEYDOWN:
             if event.key == pygame.K_ESCAPE:
-                 running = False
+                running = False
             elif event.key == pygame.K_LEFT:
-                 pressed = 'left'
+                pressed = 'left'
             elif event.key == pygame.K_RIGHT:
-                 pressed = 'right'
+                pressed = 'right'
             elif event.key == pygame.K_UP:
                  bullets.append(Bullet(x+10,y-10))
         if event.type == pygame.KEYUP:
@@ -66,24 +75,24 @@ while running:
                 pressed = ''
             elif event.key == pygame.K_RIGHT:
                 pressed = ''
-    
+        
     if pressed == 'left':
-         x -= 3
+        x -= 3
     elif pressed == 'right':
-         x += 3
+        x += 3
 
     for bullet in bullets:
-         pygame.draw.rect(screen,(100,100,100),(bullet.x,bullet.y,20,20))
-         bullet.y -= 10
+        pygame.draw.rect(screen,(100,100,100),(bullet.x,bullet.y,20,20))
+        bullet.y -= 10
 
     if not enemy:
-         level += 1
-         ey = [50]
-         for i in range(level):
+        level += 1
+        ey = [50]
+        for i in range(level):
             if level > 3:
-                 ey.append(80)
-                 if level > 7:
-                      ey.append(20)
+                ey.append(80)
+                if level > 7:
+                    ey.append(20)
             direc = random.randint(0,1)
             if direc == 0:
                 enemy.append(Enemy(SCREEN_WIDTH/2,random.choice(ey),'left',random.randint(8,30)/10))
@@ -105,25 +114,27 @@ while running:
 
 
     for i in enemy:
-         for b in bullets:
-              rect_enemy = pygame.Rect(i.x,i.y,20,20)
-              rect_bullet = pygame.Rect(b.x,b.y,20,20)
-              if rect_enemy.colliderect(rect_bullet):
-                   enemy.remove(i)
-    
-    if time == 100:
+        for b in bullets:
+            rect_enemy = pygame.Rect(i.x,i.y,20,20)
+            rect_bullet = pygame.Rect(b.x,b.y,20,20)
+            if rect_enemy.colliderect(rect_bullet):
+                enemy.remove(i)
+        
+    if time1 == 100:
         shoot = random.choice(enemy)
         ebullet.append(Bullet(shoot.x,shoot.y))
-        time = 0
+        time1 = 0
 
     for i in ebullet:
-         rect_ebullet = pygame.Rect(i.x,i.y,20,20)
-         pygame.draw.rect(screen,(65, 5, 150),(rect_ebullet))
-         i.y += 1
-         if rect_play.colliderect(rect_ebullet):
-              running = False
-         
+        rect_ebullet = pygame.Rect(i.x,i.y,20,20)
+        pygame.draw.rect(screen,(65, 5, 150),(rect_ebullet))
+        i.y += 1
+        if rect_play.colliderect(rect_ebullet):
+            bedead()
+            
 
-    time += 1
+    time1 += 1
+
+
     pygame.display.update()
     fps.tick(100)
