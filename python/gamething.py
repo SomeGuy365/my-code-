@@ -23,7 +23,7 @@ running = True
 x = SCREEN_WIDTH/2
 y = 250
 
-y1 = random.randint(1,SCREEN_HIGHT-80)
+y1 = random.randint(1,SCREEN_HIGHT-100)
 y2 = y1 + 250
 
 xx = SCREEN_WIDTH-50
