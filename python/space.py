@@ -33,11 +33,21 @@ class Bullet:
           self.y = y
 
 class Enemy:
-     def __init__(self,x,y,direction,speed):
+     def __init__(self,x,y,direction,speed,clas):
           self.x = x
           self.y = y
           self.direction = direction
           self.speed = speed
+          self.clas = clas
+
+class Boss:
+    def __init__(self,x,y,hp,direction,clas):
+        self.x = x
+        self.y = y
+        self.hp = hp
+        self.direction = direction
+        self.clas = clas
+        self.speed = 1
 
 pressed = ''
 level = 0
@@ -85,7 +95,10 @@ while running:
         pygame.draw.rect(screen,(100,100,100),(bullet.x,bullet.y,20,20))
         bullet.y -= 10
 
-    if not enemy:
+    if level == 3 and not enemy:
+        enemy.append(Boss(SCREEN_WIDTH/2,50,100,'left','b'))
+
+    if not enemy and level != 3:
         level += 1
         ey = [50]
         for i in range(level):
@@ -95,12 +108,14 @@ while running:
                     ey.append(20)
             direc = random.randint(0,1)
             if direc == 0:
-                enemy.append(Enemy(SCREEN_WIDTH/2,random.choice(ey),'left',random.randint(8,30)/10))
+                enemy.append(Enemy(SCREEN_WIDTH/2,random.choice(ey),'left',random.randint(8,30)/10,'e'))
             else:
-                enemy.append(Enemy(SCREEN_WIDTH/2,random.choice(ey),'right',random.randint(8,30)/10))
+                enemy.append(Enemy(SCREEN_WIDTH/2,random.choice(ey),'right',random.randint(8,30)/10,'e'))
     else:
         for i in enemy:
+            
             pygame.draw.rect(screen,(219, 7, 7),(i.x,i.y,20,20))
+
             if i.direction == 'left':
                 if i.x < 100:
                     i.direction = 'right'
@@ -117,8 +132,13 @@ while running:
         for b in bullets:
             rect_enemy = pygame.Rect(i.x,i.y,20,20)
             rect_bullet = pygame.Rect(b.x,b.y,20,20)
-            if rect_enemy.colliderect(rect_bullet):
+            if rect_enemy.colliderect(rect_bullet) and i.clas == 'e':
                 enemy.remove(i)
+            elif rect_enemy.colliderect(rect_bullet) and i.clas == 'b':
+                i.hp = i.hp - 10
+                if i.hp == 0:
+                    enemy.remove(i)
+                    level += 1
         
     if time1 == 100:
         shoot = random.choice(enemy)
