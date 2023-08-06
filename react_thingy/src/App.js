@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import Pokecard from './pokecard';
 
 
 function App() {
@@ -36,10 +37,7 @@ function App() {
       {
         pokemon.name?.length > 0
           ? (
-            <h1 className='container'>
-              {pokemon.name}<br />
-              <img src={pokemon.sprites.versions["generation-ii"].crystal.front_default} />
-            </h1>
+            <Pokecard pokemon = {pokemon} />
           ) : (
             <div className='empty'>
               <h2>No Pokemon Found</h2>
