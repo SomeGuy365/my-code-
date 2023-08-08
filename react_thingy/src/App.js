@@ -6,8 +6,8 @@ import Pokecard from './pokecard';
 function App() {
   const [count, setcount] = useState();
   const [pokemon, setpokemon] = useState([]);
+  const [allpoke , setallpoke] = useState([]);
   const [search, setsearch] = useState();
-
 
   function fetchKantoPokemon(){
     setpokemon('')
@@ -18,8 +18,9 @@ function App() {
     console.log(pokemon)
   }
 
+
   useEffect(() => {
-    setcount(0)
+    setcount(0);
   },[])
 
   return (
@@ -44,6 +45,10 @@ function App() {
             </div>
           )
       }
+
+      <div>
+        Navbar
+      </div>
 
     </div>
   );
