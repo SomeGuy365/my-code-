@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.nasaimg{
+  width: 50vh;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+}
+
+.nasainfo{
+  display: flex;
+  text-align: left;
+}
+
+.nasacontain{
+  display: flex;
+  margin-top: 10px;
+}
