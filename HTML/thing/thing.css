@@ -96,34 +96,11 @@ body{
 }
 
 .more-pic{
-    margin-left: 0px;
+    margin-left: 8px;
     width: 68px;
     height: 32px;
 }
 
-.project,.project2,.project3 {
-    margin-left: 100px;
-    background-color: red;
-    margin-right: 150px;
-    border-radius: 10px;
-    margin-top: 10px;
-    height: 300px;
-}
-
-.project{
-    margin-top: 30px;
-}
-
-.project2{
-    margin-left: 25%;
-    margin-right: 100px;
-}
-
-.project3{
-    margin-left: 50%;
-    margin-right: 50px;
-    margin-bottom: 10px;
-}
 
 @media (min-width:800px) {
     .project{
@@ -135,4 +112,51 @@ body{
     .project3{
         width: 750px;
     }
+}
+
+.banner{
+    color: white;
+    display: flex;
+    height: 400px;
+    width: 1410px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.banner > div{
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background: rgb(10,6,19);
+    background: linear-gradient(45deg, rgba(10,6,19,1) 0%, rgba(48,30,93,1) 60%, rgba(67,42,130,1) 100%);
+}
+
+.btitle{
+    padding-left: 20px;
+    padding-top: 7px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.bpic{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 8px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.btext{
+    padding-left: 22px;
+    padding-right: 18px;
+    padding-top: 15px;
+    font-weight: 400;
 }
