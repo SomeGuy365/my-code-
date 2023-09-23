@@ -15,9 +15,13 @@ const card = ({prop}) => {
                     Your hub for whatever this is!
                 </span>
             </div>
-            <div className="nasa-contain" style={{background: prop.url}}>
-                <img src={prop.url} className='nasaimg'/>
-                {prop.explanation}
+            <div className="nasa-contain" style={{backgroundImage: `url(${prop.url})`,backgroundPosition: 'left', backgroundSize: 'cover'}}>
+                <span className="nasatext">
+                    <span className="nasatitle">
+                        {prop.title}
+                    </span><br />
+                    {prop.explanation}
+                </span>
             </div>
         </div>
 
