@@ -17,10 +17,6 @@
   color: white;
 }
 
-.navbar > div:hover{
-  cursor: pointer;
-}
-
 .navbar > div{
   padding-bottom: 10px;
 }
@@ -45,6 +41,10 @@
   margin-bottom: 10px;
 }
 
+.nav-border-top:hover{
+  cursor: pointer;
+}
+
 .main{
   display: inline-block;
   width: 100%;
@@ -54,8 +54,8 @@
 }
 
 .one-home{
-  background: rgb(119,0,255);
-  background: linear-gradient(145deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
+  background: rgb(95,15,180);
+  background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(85, 221, 224) 92%);
   height: 250px;
   margin: 10px;
   border-radius: 10px;
@@ -92,6 +92,7 @@
   height: 250px;
   display: flex;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nasatext{
@@ -107,4 +108,47 @@
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 5px;
+}
+
+.video{
+  display: block;
+  width: 100px;
+  aspect-ratio: 1/2;
+  display: flex;
+  width: 50%;
+  padding-left: 20px;
+  justify-content: right;
+  border-radius: 10px;
+}
+
+.flex-grid{
+  display: flex;
+  height: 100px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.flex-grid > div{
+  flex: 1;
+  border-radius: 10px;
+}
+
+.flex-grid-one{
+  background-color: rgb(26, 26, 26);
+}
+
+.flex-grid-two{
+  background-color: rgb(95, 15, 180);
+}
+
+.flex-grid-three{
+  background-color: rgb(40, 146, 215);
+}
+
+.flex-grid-four{
+  background-color: rgb(85, 221, 224);
+}
+
+.flex-grid-five{
+  background-color: rgb(238 ,240 ,242);
 }

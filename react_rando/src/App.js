@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState,useEffect } from 'react';
 import Homecard from './Homecard'
@@ -35,7 +34,7 @@ function App() {
         </div>
       </nav>
       <div className='main'>
-        {nav == 1
+        {nav === 1
           ? (
             <div className='one-home'>
               <Homecard prop={nasa} />
@@ -43,13 +42,13 @@ function App() {
           ) :
             console.log()
         }
-        {nav == 2
+        {nav === 2
           ? (
             <div className='two-home'>two</div>
           ) :
             console.log()
         }
-        {nav == 3
+        {nav === 3
           ? (
             <div className='three-home'>three</div>
           ) :
