@@ -17,11 +17,31 @@ const card = ({prop}) => {
                 </span>
             </div>
             <div className="flex-grid">
-                <div className="flex-grid-one">one</div>
-                <div className="flex-grid-two">two</div>
-                <div className="flex-grid-three">three</div>
-                <div className="flex-grid-four">four</div>
-                <div className="flex-grid-five">five</div>
+                <div className="flex-grid-one">
+                    <span className="gridtext">
+                        One
+                    </span>
+                </div>
+                <div className="flex-grid-two">
+                    <span className="gridtext">
+                        Two
+                    </span>
+                </div>
+                <div className="flex-grid-three">
+                    <span className="gridtext">
+                        Three
+                    </span>
+                </div>
+                <div className="flex-grid-four">
+                    <span className="gridtext" style={{color: 'grey'}}>
+                        Four
+                    </span>
+                </div>
+                <div className="flex-grid-five">
+                    <span className="gridtext" style={{color: 'black'}}>
+                        Five
+                    </span>
+                </div>
             </div>
             <div className="nasa-contain" style={{backgroundImage: `url(${prop.url})`,backgroundPosition: 'left', backgroundSize: 'cover'}}>
                 <span className="nasatext">
