@@ -155,3 +155,39 @@
 .flex-grid-five{
   background-color: rgb(238 ,240 ,242);
 }
+
+.weather-container{
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  height: 250px;
+}
+
+.weather{
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather > img{
+  margin-top: 15px;
+}
+
+.weather-date{
+  margin-top: 5px;
+}
+
+.weather-temp{
+  height: fit-content;
+  margin-top: 65px;
+}
+
+.weather-temprange{
+  margin-top: -10px;
+}
