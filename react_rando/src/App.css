@@ -65,11 +65,24 @@
   font-size: 12px;
 }
 
+.two-toptext{
+  font-size: 12px;
+  margin-left: 10px;
+  padding-top: 6px;
+}
+
 .one-toptitle{
   font-size: 40px;
   margin-top: 80px;
   font-weight: bold;
   margin-left: -2px;
+}
+
+.two-toptitle{
+  font-size: 36px;
+  margin-top: 80px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .two-home{
