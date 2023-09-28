@@ -111,10 +111,11 @@
 .nasatext{
   margin-left: 10px;
   font-size: 85%;
-  mix-blend-mode: difference;
   color: white;
   width: 600px;
+  height: fit-content;
   padding-bottom: 5px;
+  text-shadow: 2px 2px black;
 }
 
 .nasatitle{
@@ -182,14 +183,14 @@
   border: solid;
   border-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .weather > img{
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .weather-date{
@@ -202,5 +203,5 @@
 }
 
 .weather-temprange{
-  margin-top: -10px;
+  margin-top: -5px;
 }

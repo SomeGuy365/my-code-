@@ -25,7 +25,7 @@ function App() {
   function fetchweather() {
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=ea0c3ac899f343c1b5e173401232509&q=Bristol&days=7&aqi=no&alerts=no1`)
     .then(response => response.json())
-    .then(weather => setforeweth(weather))
+    .then(weather => setforeweth(weather.current))
   }
 
   useEffect(()=>setnav(2),[])
