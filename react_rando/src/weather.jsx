@@ -17,7 +17,7 @@ const Card = (props) => {
     useEffect(fetchweather, [props])
 
     return (
-        <div>
+        <div className="two-container">
             <div className="two-home">
                 <div className="two-toptext">
                     Weather

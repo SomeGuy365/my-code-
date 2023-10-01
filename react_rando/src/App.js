@@ -2,6 +2,8 @@ import './App.css';
 import { useState,useEffect } from 'react';
 import Homecard from './Homecard'
 import WeatherCard from './weather'
+import homeicon from './pics/home2.svg'
+import weathericon from './pics/weather.svg'
 
 function App() {
   const [nav, setnav] = useState()
@@ -28,7 +30,7 @@ function App() {
     .then(weather => setforeweth(weather.current))
   }
 
-  useEffect(()=>setnav(2),[])
+  useEffect(()=>setnav(1),[])
   useEffect(fectchNasa,[])
   useEffect(fetchweather,[nav])
   useEffect(fetchcurrweather,[nav])
@@ -39,13 +41,15 @@ function App() {
     <div className="App">
       <nav className='navbar'>
         <div className='nav-border'>
-          <div onClick={()=>setnav(1)} className='nav-border-top'>
-            One
+          <div className='nav-border-one'>
+            <div onClick={()=>setnav(1)} className='nav-border-top'>
+              <img src={homeicon} className='home-icon' />
+            </div>
+            <div onClick={()=>setnav(2)} className='nav-border-top'>
+              <img src={weathericon} className='weather-icon' />
+            </div>
           </div>
-          <div onClick={()=>setnav(2)} className='nav-border-top'>
-            Two
-          </div>
-          <div onClick={()=>setnav(3)} className='nav-border-top'>
+          <div onClick={()=>setnav(3)} className='nav-border-bottom'>
             Three
           </div>
         </div>
@@ -53,7 +57,7 @@ function App() {
       <div className='main'>
         {nav === 1
           ? (
-            <div className='one-home'>
+            <div>
               <Homecard prop={nasa} />
             </div>
           ) :

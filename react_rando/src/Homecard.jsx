@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 
 const card = ({prop}) => {
     return (
-        <div>
+        <div className="one-container">
             <div className="one-home">
                 <span className="one-toptext">
                     Home
@@ -43,7 +43,7 @@ const card = ({prop}) => {
                     </span>
                 </div>
             </div>
-            <div className="nasa-contain" style={{backgroundImage: `url(${prop.url})`,backgroundPosition: 'left', backgroundSize: 'cover'}}>
+            <div className="nasa-contain" style={{backgroundImage: `url(${prop.url})`,backgroundPosition: '25% 20%', backgroundSize: 'cover'}}>
                 <span className="nasatext">
                     <span className="nasatitle">
                         {prop.title}

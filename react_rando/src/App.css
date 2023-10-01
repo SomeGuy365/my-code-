@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
 .App{
   display: flex;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 
 .navbar{
   text-align: left;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-top: 10px;
   padding-right: 0px;
   padding-bottom: 30px;
@@ -22,23 +25,45 @@
 }
 
 .nav-border{
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.0);
   height: 90vh;
   border-radius: 10px;
-  padding: 5px;
+  padding: 1px;
 }
 
-.nav-border-top{
+.nav-border-one{
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding: 2px;
+}
+
+.nav-border-top,.nav-border-bottom{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 15px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.nav-border-top{
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+}
+
+.nav-border-bottom{
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-top: 10px;
+  height: 70vh;
 }
 
 .nav-border-top:hover{
@@ -57,8 +82,9 @@
   background: rgb(95,15,180);
   background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(85, 221, 224) 92%);
   height: 250px;
-  margin: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
+  padding: 8px;
 }
 
 .one-toptext{
@@ -86,8 +112,8 @@
 }
 
 .two-home{
-  background: rgb(119,0,255);
-  background: linear-gradient(115deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
+  background: rgb(0,0,0);
+  background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
   height: 250px;
   margin: 10px;
   border-radius: 10px;
@@ -102,7 +128,7 @@
 }
 
 .nasa-contain{
-  height: 250px;
+  height: 280px;
   display: flex;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -114,7 +140,7 @@
   color: white;
   width: 600px;
   height: fit-content;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   text-shadow: 2px 2px black;
 }
 
@@ -187,6 +213,8 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .weather > img{
@@ -204,4 +232,36 @@
 
 .weather-temprange{
   margin-top: -5px;
+}
+
+.home-icon{
+  filter: invert(0.6);
+}
+
+.weather-icon{
+  filter: invert(0.6);
+}
+
+.home-icon:hover,.weather-icon:hover{
+  filter: invert(0.7);
+}
+
+.home-icon:active,.weather-icon:active{
+  filter: invert(1);
+}
+
+.one-container{
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  background: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(95,15,180,0.8) 100%);
+}
+
+.two-container{
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  background: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(40,146,215,0.8) 100%);
 }
