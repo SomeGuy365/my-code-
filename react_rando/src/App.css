@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 .App{
   display: flex;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  /*font-family: 'Plus Jakarta Sans', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -89,12 +91,14 @@
 
 .one-toptext{
   font-size: 12px;
+  font-weight: 300;
 }
 
 .two-toptext{
   font-size: 12px;
   margin-left: 10px;
   padding-top: 6px;
+  font-weight: 300;
 }
 
 .one-toptitle{
@@ -115,7 +119,8 @@
   background: rgb(0,0,0);
   background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
   height: 250px;
-  margin: 10px;
+  padding: 8px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -136,7 +141,7 @@
 
 .nasatext{
   margin-left: 10px;
-  font-size: 85%;
+  font-size: 13px;
   color: white;
   width: 600px;
   height: fit-content;
@@ -198,7 +203,6 @@
 
 .weather-container{
   background-color: rgba(255, 255, 255, 0.05);
-  margin-left: 10px;
   border-radius: 10px;
   padding: 5px;
   display: flex;
@@ -250,18 +254,83 @@
   filter: invert(1);
 }
 
+.one-container::-webkit-scrollbar{
+  background-color: black;
+  width: 10px;
+}
+
+.one-container::-webkit-scrollbar-thumb{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .one-container{
   padding: 15px;
+  overflow-y: scroll;
+  height: 90vh;
   margin: 10px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  background: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(95,15,180,0.8) 100%);
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(95,15,180,0.8) 80%);
 }
 
 .two-container{
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  background: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(40,146,215,0.8) 100%);
+  background: rgb(0,0,0);
+  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+}
+
+.todo-container{
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  height: 230px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.todo-add{
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.todo-add > button{
+  margin-top: 30px;
+  width: 70%;
+  height: 30%;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgb(95, 15, 180);
+  color: white;
+  transition: transform 0.15s;
+  transition: box-shadow 0.15s;
+}
+
+.todo-add > button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 40px -8px rgba(255,255,255,0.5);
+}
+
+.todos{
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+
+.todos > div{
+  background-color: rgb(40, 146, 215);
+  border-radius: 10px;
+  flex: 1;
+  padding: 5px;
+  color: black;
 }
