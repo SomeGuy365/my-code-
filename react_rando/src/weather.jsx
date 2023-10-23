@@ -12,6 +12,7 @@ const Card = (props) => {
         .then(weather => settext(weather.current.condition.text))
 
         console.log(text)
+        console.log(array)
     }
 
     useEffect(fetchweather, [props])

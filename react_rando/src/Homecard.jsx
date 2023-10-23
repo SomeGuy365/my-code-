@@ -3,42 +3,46 @@ import './App.css'
 import ReactPlayer from 'react-player'
 import { useState,useEffect } from "react";
 
-const Card = ({prop}) => {
-    let renders = 0
+const Card1 = ({prop}) => {
     const [todos,settodos] = useState([])
+    const [renders,setrenders] = useState(0)
     
     useEffect(fetchtodos,[renders])
     useEffect(fetchtodos,[])
 
     function createTodo(title,duedate) {
+        console.log(renders)
         const id = ' ' + new Date().getTime();
         let temp = todos
+        setrenders(renders+1)
 
-        temp.push({
+        todos.push({
             title: title,
             duedate: duedate,
             id: id
         });
-        settodos(temp)
+        console.log(temp,todos)
+        /*settodos(temp)*/
 
         localStorage.setItem('todos',JSON.stringify(todos));
     }
 
     function addTodo() {
-        console.log(renders)
+        console.log('yay')
         const textbox = document.getElementById('todo-title');
         const title = textbox.value;
 
         const datepicker = document.getElementById('todo-date');
         const duedate = datepicker.value;
+        const temp = todos
 
-        if (todos.length > 3) {
+        if (todos.length > 7) {
             let temp = todos
             console.log('yipee')
             temp.splice(0,1)
             settodos(temp)
+            console.log(todos)
         }
-        renders += 1;
 
         createTodo(title,duedate);
 
@@ -81,14 +85,17 @@ const Card = ({prop}) => {
             </div>
             <div className="todo-container">
                 <div className="todo-add">
-                    Got anything else?<br />
-                    <input id="todo-title" />
-                    <input id="todo-date" />
+                    Got anything Todo?<br />
+                    Description:<input id="todo-title" /><br />
+                    Due date:<input id="todo-date" />
                     <button onClick={addTodo}>Add Todo</button>
                 </div>
                 <div className="todos">
                     {todos.map((e)=>(
-                        <div>{e.title} {e.duedate}</div>
+                        <div>
+                            <div className="todo-title">{e.title}</div> 
+                            <div className="todo-date">{e.duedate}</div>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -113,4 +120,4 @@ const Card = ({prop}) => {
     )
 }
 
-export default Card;
+export default Card1;

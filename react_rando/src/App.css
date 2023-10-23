@@ -282,7 +282,7 @@
 }
 
 .todo-container{
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.125);
   border-radius: 10px;
   height: 230px;
   margin-bottom: 10px;
@@ -290,7 +290,7 @@
 }
 
 .todo-add{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 10px;
   padding: 10px;
   width: 300px;
@@ -316,21 +316,39 @@
 }
 
 .todos{
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   flex: 1;
   gap: 10px;
 }
 
 .todos > div{
-  background-color: rgb(40, 146, 215);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  flex: 1;
   padding: 5px;
-  color: black;
+  color: white;
+}
+
+.todo-add > input{
+  background-color: transparent;
+  border: none;
+  border-bottom: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  transition: border-color 0.15s;
+}
+
+.todo-add > input:focus{
+  border-color: rgba(255, 255, 255, 0.9);
+  outline: none;
+}
+.todo-title{
+  font-weight: bold;
+  font-size: 19px;
 }
