@@ -1,52 +1,59 @@
 #include <iostream>
-#include <list>
 
-using namespace std;
+void boardprint(char board[3][3]) {
+    std::cout << "   |     |  \n";
+    std::cout << " " << board[0][0] << " |  " << board[0][1] << "  | " << board[0][2] << "  \n";
+    std::cout << "___|_____|____\n";
+    std::cout << "   |     |  \n";
+    std::cout << " " << board[1][0] << " |  " << board[1][1] << "  | " << board[1][2] << "  \n";
+    std::cout << "___|_____|____\n";
+    std::cout << "   |     |  \n";
+    std::cout << " " << board[2][0] << " |  " << board[2][1] << "  | " << board[2][2] << "  \n";
+    std::cout << "   |     |  \n";
+}
 
+bool boardsolve(char board[3][3]) {
+    for (int i;i<3;i++) {
+        if (board[i][0]==board[i][1] && board[i][0]==board[i][2] || board[0][i]==board[1][i] && board[0][i]==board[2][i]) {//rows
+            return true;
+        }
+    }
+    if (board[0][0]==board[1][1] && board[1][1]==board[2][2] || board[0][2]==board[1][1] && board[1][1]==board[2][0]) {//columns
+        return true;
+    }
+    if (board[0][0]==board[1][1] && board[1][1]==board[2][2] || board[0][2]==board[1][1] && board[1][1]==board[2][0]) {//diagnals
+        return true;
+    }
+    return false;
+}
 
 int main() {
-    string input;
-    int pasnum;
-    int num1,num2;
-    list<char> operators{};
-    cout << "Enter you equation:";
-    cin >> input;
-    for (auto i:input) {
-        operators.push_back(i);
-    };
-
-    int n = size(operators);
-    list<char>::iterator its = operators.begin();
-    list<char>::iterator itm = operators.begin();
-    list<char>::iterator ite = operators.begin();
-    advance(itm,1);
-    advance(ite,2);
+    bool win = false;
+    int row = 0;
+    int column = 0;
+    char turn = 'X';
+    char boards[3][3] = {
+        {'1','2','3'},
+        {'4','5','6'},
+        {'7','8','9'}};
     
-    for (int b = 0;b < n+1;b++) {
-
-        switch(*itm)
-        {
-        case '+':
-            cout << endl << "addition" << endl << *its << endl << *itm << endl << *ite;
-            num1 = *its - '0';
-            num2 = *ite - '0';
-            break;
-        case '-':
-            cout << "subtract";
-            break;
-        default:
-            break;
+    while (win==false) {
+        boardprint(boards);
+        std::cout << "Its " << turn << "s turn" << std::endl;
+        std::cout << "Enter a row:";
+        std::cin >> row;
+        std::cout << "Enter a column:";
+        std::cin >> column;
+        boards[row-1][column-1] = turn;
+        win = boardsolve(boards);
+        if (turn == 'X') {
+            turn = 'O';
         }
-
-        advance(its,2);
-        advance(itm,2);
-        advance(ite,2);
+        else {
+            turn = 'X';
+        }
+        continue;
     }
-
-    cout << "Output:";
-    for (auto c:operators) {
-        cout << c;
-    }
-    
+    std::cout << "Someone Won!";
     return 0;
 }
