@@ -44,7 +44,12 @@ int main() {
         std::cin >> row;
         std::cout << "Enter a column:";
         std::cin >> column;
-        boards[row-1][column-1] = turn;
+        if (boards[row-1][column-1] !='X' && boards[row-1][column-1] !='O') {
+            boards[row-1][column-1] = turn; 
+        }
+        else {
+            std::cout << "Not cool,no turn for u" << std::endl;
+        }
         win = boardsolve(boards);
         if (turn == 'X') {
             turn = 'O';
@@ -54,6 +59,11 @@ int main() {
         }
         continue;
     }
-    std::cout << "Someone Won!";
+    if (turn == 'X') {
+        std::cout << "Player O Won!";
+    }
+    else {
+        std::cout << "Player X Won!";
+    }
     return 0;
 }
