@@ -11,8 +11,12 @@ int main() {
 
     std::string currency;
     float currencyamount;
-    std::cout << "yay" << std::endl;
-    std::cin >> currencyamount >> currency;
-    std::cout << "\x9C" << currencyamount << " : " << floor((converter[currency]*currencyamount)) << " " << currency;
+    std::cout << "Enter Gdp:";
+    std::cin >> currencyamount;
+    std::cout << "Suppoerted currency:" << std::endl << "Euro" << std::endl << "Usd" << std::endl << "Yen" << std::endl;
+    std::cout << "Enter currency to convert:";
+    std::cin >> currency;
+    std::cout << "\x9C" << currencyamount << " : " << floor((converter[currency]*currencyamount)*100)/100 << " " << currency;
+
     return 0;
 }
