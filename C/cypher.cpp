@@ -2,34 +2,44 @@
 //vigenere cipher
 
 int main() {
-    std::string alpha = "abcdefghijklmnopqrstuvwxyz";
+    //base variables
+    std::string alpha = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
     std::string key = "houghton";
-    char letter;
-    char* keypoint;
-    char* point;
     std::string inp;
-    inp = "michigan technological university";
+    int mode;
+    char* keypoint, letter;
+    char* point;
+    //input
+    std::cout << "1:Encrypt\n2:Decrypt\n";
+    std::cin >> mode;
+    std::cout << "Enter phrase:";
+    std::getline(std::cin >> std::ws, inp);
+    std::cout << inp << " : ";
+    //pointers
     point = &inp[0];
     keypoint = &key[0];
+    
     for (int i=0;i<inp.length();i++) {
+
         if (*point != ' ') {
-            if (alpha.find(*point)+alpha.find(*keypoint) > 26) {
-                letter = alpha[(alpha.find(*point)+alpha.find(*keypoint))-27];
-            } else {
+            //letter indexing/ forward or backwards based on mode
+            if (mode == 1) {
                 letter = alpha[alpha.find(*point)+alpha.find(*keypoint)];
+            } else {
+                letter = alpha[(alpha.find(*point)+26)-alpha.find(*keypoint)];
             }
+            //reset keyword or next letter of keyword
+            if (*keypoint != key[(key.length())-1]) {
+                keypoint++;
+            } else {
+                keypoint = &key[0];
+            };
         } else {
             letter = ' ';
         };
-        std::cout << letter << " : " << *point << " : " << *keypoint << std::endl;
-        point++;
-        if (*keypoint != key[(key.length())-1]) {
-            keypoint++;
-        }
-        else {
-            keypoint = &key[0];
-        };
-    };
 
+        std::cout << letter;
+        point++;
+    };
     return 0;
 }
