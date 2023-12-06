@@ -34,7 +34,6 @@ const Card1 = ({prop}) => {
 
         const datepicker = document.getElementById('todo-date');
         const duedate = datepicker.value;
-        const temp = todos
 
         if (todos.length > 7) {
             let temp = todos
@@ -86,8 +85,10 @@ const Card1 = ({prop}) => {
             <div className="todo-container">
                 <div className="todo-add">
                     Got anything Todo?<br />
-                    Description:<input id="todo-title" /><br />
-                    Due date:<input id="todo-date" />
+                    <div className="todo-add-inp">
+                        <input id="todo-title" placeholder="Title" /><br />
+                        <input id="todo-date" placeholder="Info" />
+                    </div>
                     <button onClick={addTodo}>Add Todo</button>
                 </div>
                 <div className="todos">

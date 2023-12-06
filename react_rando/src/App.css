@@ -7,6 +7,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body{
+  overflow-y: hidden;
+}
 
 .navbar{
   text-align: left;
@@ -80,6 +83,8 @@
   height: 100vh;
 }
 
+
+
 .one-home{
   background: rgb(95,15,180);
   background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(85, 221, 224) 92%);
@@ -94,13 +99,6 @@
   font-weight: 300;
 }
 
-.two-toptext{
-  font-size: 12px;
-  margin-left: 10px;
-  padding-top: 6px;
-  font-weight: 300;
-}
-
 .one-toptitle{
   font-size: 40px;
   margin-top: 80px;
@@ -108,12 +106,7 @@
   margin-left: -2px;
 }
 
-.two-toptitle{
-  font-size: 36px;
-  margin-top: 80px;
-  font-weight: bold;
-  margin-left: 10px;
-}
+
 
 .two-home{
   background: rgb(0,0,0);
@@ -123,6 +116,22 @@
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.two-toptitle{
+  font-size: 36px;
+  margin-top: 80px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.two-toptext{
+  font-size: 12px;
+  margin-left: 10px;
+  padding-top: 6px;
+  font-weight: 300;
+}
+
+
 
 .three-home{
   background: rgb(119,0,255);
@@ -166,47 +175,51 @@
   border-radius: 10px;
 }
 
-.flex-grid{
-  display: flex;
-  height: 100px;
-  gap: 10px;
-  margin-bottom: 20px;
+
+.home-icon{
+  filter: invert(0.6);
 }
 
-.flex-grid > div{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.weather-icon{
+  filter: invert(0.6);
+}
+
+.home-icon:hover,.weather-icon:hover{
+  filter: invert(0.7);
+}
+
+.home-icon:active,.weather-icon:active{
+  filter: invert(1);
+}
+
+
+
+.one-container{
+  padding: 15px;
+  overflow-y: scroll;
+  height: 90vh;
+  margin: 10px;
   border-radius: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(95,15,180,0.8) 80%);
 }
 
-.flex-grid-one{
-  background-color: rgb(26, 26, 26);
+.one-container::-webkit-scrollbar-thumb{
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.flex-grid-two{
-  background-color: rgb(95, 15, 180);
+.one-container::-webkit-scrollbar{
+  background-color: black;
+  width: 10px;
 }
 
-.flex-grid-three{
-  background-color: rgb(40, 146, 215);
-}
 
-.flex-grid-four{
-  background-color: rgb(85, 221, 224);
-}
-
-.flex-grid-five{
-  background-color: rgb(238 ,240 ,242);
-}
-
-.weather-container{
-  background-color: rgba(255, 255, 255, 0.05);
+.two-container{
+  padding: 15px;
+  margin: 10px;
   border-radius: 10px;
-  padding: 5px;
-  display: flex;
-  height: 250px;
+  background: rgb(0,0,0);
+  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
 }
 
 .weather{
@@ -238,47 +251,12 @@
   margin-top: -5px;
 }
 
-.home-icon{
-  filter: invert(0.6);
-}
-
-.weather-icon{
-  filter: invert(0.6);
-}
-
-.home-icon:hover,.weather-icon:hover{
-  filter: invert(0.7);
-}
-
-.home-icon:active,.weather-icon:active{
-  filter: invert(1);
-}
-
-.one-container::-webkit-scrollbar{
-  background-color: black;
-  width: 10px;
-}
-
-.one-container::-webkit-scrollbar-thumb{
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.one-container{
-  padding: 15px;
-  overflow-y: scroll;
-  height: 90vh;
-  margin: 10px;
+.weather-container{
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(95,15,180,0.8) 80%);
-}
-
-.two-container{
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+  padding: 5px;
+  display: flex;
+  height: 250px;
 }
 
 .todo-container{
@@ -335,16 +313,27 @@
   color: white;
 }
 
-.todo-add > input{
-  background-color: transparent;
+.todo-add-inp > input{
+  background-color: rgba(255, 255, 255, 0.04);
   border: none;
   border-bottom: solid;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-left: solid;
+  border-color: rgba(255, 255, 255, 1);
   color: white;
   transition: border-color 0.15s;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 5px;
 }
 
-.todo-add > input:focus{
+.todo-add-inp{
+  text-align: center;
+  width: 300px;
+}
+
+.todo-add-inp > input:focus{
   border-color: rgba(255, 255, 255, 0.9);
   outline: none;
 }
