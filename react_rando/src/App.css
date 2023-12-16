@@ -131,8 +131,6 @@ html, body{
   font-weight: 300;
 }
 
-
-
 .three-home{
   background: rgb(119,0,255);
   background: linear-gradient(85deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
@@ -197,6 +195,7 @@ html, body{
 .one-container{
   padding: 15px;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 90vh;
   margin: 10px;
   border-radius: 10px;
@@ -215,6 +214,14 @@ html, body{
 
 
 .two-container{
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+}
+
+.acc-container{
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
@@ -271,7 +278,7 @@ html, body{
   background-color: rgba(0, 0, 0, 0.7);
   margin: 10px;
   padding: 10px;
-  width: 300px;
+  /*width: 300px;*/
   border-radius: 10px;
   text-align: center;
 }
@@ -295,15 +302,27 @@ html, body{
 
 .todos{
   background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  width: 1px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   flex: 1;
   gap: 10px;
+  overflow-y: hidden;
+}
+
+.todos::-webkit-scrollbar-thumb{
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 5px;
+}
+
+.todos::-webkit-scrollbar{
+  background-color: black;
+  height: 5px;
+  border-radius: 2px;
 }
 
 .todos > div{
@@ -337,7 +356,26 @@ html, body{
   border-color: rgba(255, 255, 255, 0.9);
   outline: none;
 }
+
 .todo-title{
   font-weight: bold;
-  font-size: 19px;
+}
+
+@media(max-width: 800px) {
+  .todo-title{
+    font-size: 2vw;
+  }
+  .todo-date{
+    font-size: 1.5vh;
+  }
+}
+
+@media(min-width: 801px) {
+  .todo-title{
+    font-size: 19px;
+  }
+
+  .todo-date{
+    font-size: 14px;
+  }
 }

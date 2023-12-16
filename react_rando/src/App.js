@@ -48,9 +48,14 @@ function App() {
             <div onClick={()=>setnav(2)} className='nav-border-top'>
               <img src={weathericon} className='weather-icon' />
             </div>
+            <div onClick={()=>setnav(4)} className='nav-border-top'>
+              acc
+            </div>
           </div>
           <div onClick={()=>setnav(3)} className='nav-border-bottom'>
-            Three
+            <div>
+              Films
+            </div>
           </div>
         </div>
       </nav>
@@ -72,6 +77,14 @@ function App() {
         {nav === 3
           ? (
             <div className='three-home'>three</div>
+          ) :
+            console.log()
+        }
+        {nav === 4
+          ? (
+            <div className='acc-container'>
+              life
+            </div>
           ) :
             console.log()
         }
