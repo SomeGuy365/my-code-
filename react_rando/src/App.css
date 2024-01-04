@@ -224,9 +224,27 @@ html, body{
 .acc-container{
   padding: 15px;
   margin: 10px;
+  height: 90vh;
   border-radius: 10px;
   background: rgb(0,0,0);
   background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+  overflow-y: scroll;
+}
+
+.film-box{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.film-container > img{
+  height: 100px;
+}
+
+.film-container{
+  border-top: solid;
+  border-bottom: solid;
+  padding-top: 2px;
 }
 
 .weather{

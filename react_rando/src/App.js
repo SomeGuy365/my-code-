@@ -11,6 +11,23 @@ function App() {
   const [weather, setweather] = useState({})
   const [foreweth, setforeweth] = useState([])
   const NASA_API = 'aNPUGKBJgz847fa29nRAkUe01yQlQeCl5Nb1EbIe'
+  const API_URL = 'http://www.omdbapi.com?apikey=30e91ad4'
+  const [movies, setmovies] = useState([])
+  const [search, setsearch] = useState('')
+
+  const searchmovies = async (title) => {
+    const response = await fetch(`${API_URL}&i=${title}`);
+    const data = await response.json();
+
+    setmovies(data.Search)
+  } 
+
+  const filmplot = async (title) => {
+    const response = await fetch(`${API_URL}&t=${title}`);
+    const data = await response.json();
+
+    console.log(data.Search)
+  } 
 
   function fectchNasa() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`)
@@ -30,7 +47,7 @@ function App() {
     .then(weather => setforeweth(weather.current))
   }
 
-  useEffect(()=>setnav(1),[])
+  useEffect(()=>setnav(4),[])
   useEffect(fectchNasa,[])
   useEffect(fetchweather,[nav])
   useEffect(fetchcurrweather,[nav])
@@ -48,11 +65,11 @@ function App() {
             <div onClick={()=>setnav(2)} className='nav-border-top'>
               <img src={weathericon} className='weather-icon' />
             </div>
-            <div onClick={()=>setnav(4)} className='nav-border-top'>
+            <div onClick={()=>setnav(3)} className='nav-border-top'>
               acc
             </div>
           </div>
-          <div onClick={()=>setnav(3)} className='nav-border-bottom'>
+          <div onClick={()=>setnav(4)} className='nav-border-bottom'>
             <div>
               Films
             </div>
@@ -83,7 +100,29 @@ function App() {
         {nav === 4
           ? (
             <div className='acc-container'>
-              life
+              <input 
+              placeholder='Film search'
+              value={search}
+              onChange={(e)=> setsearch(e.target.value)}
+              />
+              <button style={{height: 18}} onClick={() => searchmovies(search)} />
+              {
+                movies?.length > 0
+                 ? (
+                  <div className='film-box'>
+                    {movies.map((movie) => (
+                      <div className='film-container'>
+                        <img src={movie.Poster} />
+                        {movie.Title}
+                      </div>
+                    ))}
+                  </div>
+                 ) : (
+                  <div>Search for something!!!!</div>
+                 )
+
+              }
+              
             </div>
           ) :
             console.log()
