@@ -4,6 +4,7 @@ import Homecard from './Homecard'
 import WeatherCard from './weather'
 import homeicon from './pics/home2.svg'
 import weathericon from './pics/weather.svg'
+import Filmcard from './filmcard'
 
 function App() {
   const [nav, setnav] = useState()
@@ -11,7 +12,7 @@ function App() {
   const [weather, setweather] = useState({})
   const [foreweth, setforeweth] = useState([])
   const NASA_API = 'aNPUGKBJgz847fa29nRAkUe01yQlQeCl5Nb1EbIe'
-  const API_URL = 'http://www.omdbapi.com?apikey=30e91ad4'
+  const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=30e91ad4'
   const [movies, setmovies] = useState([])
   const [search, setsearch] = useState('')
 
@@ -100,30 +101,30 @@ function App() {
         {nav === 4
           ? (
             <div className='acc-container'>
-              <input 
-              placeholder='Film search'
-              value={search}
-              onChange={(e)=> setsearch(e.target.value)}
-              />
-              <button style={{height: 18}} onClick={() => searchmovies(search)} />
-              {
-                movies?.length > 0
-                 ? (
-                  <div className='film-box'>
-                    {movies.map((movie) => (
-                      <div className='film-container'>
-                        <img src={movie.Poster} />
-                        {movie.Title}
-                      </div>
-                    ))}
-                  </div>
-                 ) : (
-                  <div>Search for something!!!!</div>
-                 )
-
-              }
-              
-            </div>
+            <input 
+            placeholder='Film search'
+            value={search}
+            onChange={(e)=> setsearch(e.target.value)}
+            />
+            <button style={{height: 18}} onClick={() => searchmovies(search)} />
+            {
+              movies?.length > 0
+               ? (
+                <div className='film-box'>
+                  {movies.map((movie) => (
+                    <div className='film-container'>
+                      <img src={movie.Poster} />
+                      {movie.Title}
+                    </div>
+                  ))}
+                </div>
+               ) : (
+                <div>Search for something!!!!</div>
+               )
+    
+            }
+            
+          </div>
           ) :
             console.log()
         }
