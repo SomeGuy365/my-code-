@@ -1,3 +1,5 @@
+#KNDA WORKS
+
 userinp = input('input:\n')
 output = 0
 

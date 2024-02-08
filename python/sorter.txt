@@ -1,2 +1,0 @@
-name:water  cost:45
-name:beans  cost:7238

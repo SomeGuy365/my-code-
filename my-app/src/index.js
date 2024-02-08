@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Axios from 'axios';
+/*import Axios from 'axios';*/
 import { useEffect, useState} from 'react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -47,10 +47,11 @@ function Onclick(){
   console.log(userfield2)
   if (userfield2 === JSON.parse(localStorage.getItem('user'))) {
     if (passfield2 === JSON.parse(localStorage.getItem('pass'))) {
-      Axios.get('https://api.quotable.io/random').then((res)=>{
+      /*Axios.get('https://api.quotable.io/random').then((res)=>{
         console.log(res.data.content)
         Render(home)
-      })
+      })*/
+      Render(home)
     }
   }
 }
