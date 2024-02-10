@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import './home.css'
 import ReactPlayer from 'react-player'
 import { useState,useEffect } from "react";
 

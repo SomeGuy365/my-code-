@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import './App.css'
+import './home.css'
 
 const Card = (props) => {
     let array = Array.from(props.fore)

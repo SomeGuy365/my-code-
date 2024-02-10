@@ -14,6 +14,8 @@ int main() {
     std::cin >> mode;
     std::cout << "Enter phrase:";
     std::getline(std::cin >> std::ws, inp);
+    std::cout << "Enter keyword:";
+    std::cin >> key;
     std::cout << inp << " : ";
     //pointers
     point = &inp[0];
