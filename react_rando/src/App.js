@@ -18,7 +18,6 @@ function App() {
                 <Route path="/Home" element={<Home />} />
                 <Route path="/Second" element={<Second />} />
             </Routes>
-          
         </Router>
     );
 }

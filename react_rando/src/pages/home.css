@@ -11,6 +11,10 @@ html, body{
   overflow-y: hidden;
 }
 
+
+
+/*Navbar styles*/
+
 .navbar{
   text-align: left;
   padding-left: 5px;
@@ -75,6 +79,28 @@ html, body{
   cursor: pointer;
 }
 
+.home-icon{
+  filter: invert(0.6);
+}
+
+.weather-icon{
+  filter: invert(0.6);
+}
+
+.home-icon:hover,.weather-icon:hover{
+  filter: invert(0.7);
+}
+
+.home-icon:active,.weather-icon:active{
+  filter: invert(1);
+}
+
+
+
+
+
+/*Home styles*/
+
 .main{
   display: inline-block;
   background-color: rgb(0, 0, 0);
@@ -82,7 +108,33 @@ html, body{
   height: 100vh;
 }
 
+.acc-container{
+  padding: 15px;
+  margin: 10px;
+  height: 90vh;
+  border-radius: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+  overflow-y: scroll;
+}
 
+.film-box{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.film-container > img{
+  height: 100px;
+}
+
+.film-container{
+  border-top: solid;
+  border-bottom: solid;
+  padding-top: 2px;
+}
+
+/*One styles*/
 
 .one-home{
   background: rgb(95,15,180);
@@ -103,39 +155,6 @@ html, body{
   margin-top: 80px;
   font-weight: bold;
   margin-left: -2px;
-}
-
-
-
-.two-home{
-  background: rgb(0,0,0);
-  background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
-  height: 250px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-.two-toptitle{
-  font-size: 36px;
-  margin-top: 80px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.two-toptext{
-  font-size: 12px;
-  margin-left: 10px;
-  padding-top: 6px;
-  font-weight: 300;
-}
-
-.three-home{
-  background: rgb(119,0,255);
-  background: linear-gradient(85deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
-  height: 250px;
-  margin: 10px;
-  border-radius: 10px;
 }
 
 .nasa-contain{
@@ -172,25 +191,6 @@ html, body{
   border-radius: 10px;
 }
 
-
-.home-icon{
-  filter: invert(0.6);
-}
-
-.weather-icon{
-  filter: invert(0.6);
-}
-
-.home-icon:hover,.weather-icon:hover{
-  filter: invert(0.7);
-}
-
-.home-icon:active,.weather-icon:active{
-  filter: invert(1);
-}
-
-
-
 .one-container{
   padding: 15px;
   overflow-y: scroll;
@@ -209,78 +209,6 @@ html, body{
 .one-container::-webkit-scrollbar{
   background-color: black;
   width: 10px;
-}
-
-
-.two-container{
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
-}
-
-.acc-container{
-  padding: 15px;
-  margin: 10px;
-  height: 90vh;
-  border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
-  overflow-y: scroll;
-}
-
-.film-box{
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.film-container > img{
-  height: 100px;
-}
-
-.film-container{
-  border-top: solid;
-  border-bottom: solid;
-  padding-top: 2px;
-}
-
-.weather{
-  border: solid;
-  border-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  background: transparent;
-  backdrop-filter: blur(10px);
-}
-
-.weather > img{
-  margin-top: 25px;
-}
-
-.weather-date{
-  margin-top: 5px;
-}
-
-.weather-temp{
-  height: fit-content;
-  margin-top: 65px;
-}
-
-.weather-temprange{
-  margin-top: -5px;
-}
-
-.weather-container{
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 5px;
-  display: flex;
-  height: 250px;
 }
 
 .todo-container{
@@ -396,3 +324,91 @@ html, body{
     font-size: 14px;
   }
 }
+
+
+/*Two styles*/
+
+
+
+.two-home{
+  background: rgb(0,0,0);
+  background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
+  height: 250px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.two-toptitle{
+  font-size: 36px;
+  margin-top: 80px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.two-toptext{
+  font-size: 12px;
+  margin-left: 10px;
+  padding-top: 6px;
+  font-weight: 300;
+}
+
+.two-container{
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgb(0,0,0);
+  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+}
+
+.weather{
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.weather > img{
+  margin-top: 25px;
+}
+
+.weather-date{
+  margin-top: 5px;
+}
+
+.weather-temp{
+  height: fit-content;
+  margin-top: 65px;
+}
+
+.weather-temprange{
+  margin-top: -5px;
+}
+
+.weather-container{
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  height: 250px;
+}
+
+
+
+/*Three styles*/
+
+
+.three-home{
+  background: rgb(119,0,255);
+  background: linear-gradient(85deg, rgb(81, 0, 173) 0%, rgb(243, 175, 255) 92%);
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
