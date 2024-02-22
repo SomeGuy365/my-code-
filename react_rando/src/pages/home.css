@@ -11,8 +11,6 @@ html, body{
   overflow-y: hidden;
 }
 
-
-
 /*Navbar styles*/
 
 .navbar{
@@ -104,6 +102,7 @@ html, body{
 .main{
   display: inline-block;
   background-color: rgb(0, 0, 0);
+  width: 100%;
   color: white;
   height: 100vh;
 }
@@ -115,7 +114,7 @@ html, body{
   border-radius: 10px;
   background: rgb(0,0,0);
   background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
-  overflow-y: scroll;
+  overflow-y: scroll
 }
 
 .film-box{
@@ -134,273 +133,7 @@ html, body{
   padding-top: 2px;
 }
 
-/*One styles*/
-
-.one-home{
-  background: rgb(95,15,180);
-  background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(85, 221, 224) 92%);
-  height: 250px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 8px;
-}
-
-.one-toptext{
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.one-toptitle{
-  font-size: 40px;
-  margin-top: 80px;
-  font-weight: bold;
-  margin-left: -2px;
-}
-
-.nasa-contain{
-  height: 280px;
-  display: flex;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nasatext{
-  margin-left: 10px;
-  font-size: 13px;
-  color: white;
-  width: 600px;
-  height: fit-content;
-  padding-bottom: 10px;
-  text-shadow: 2px 2px black;
-}
-
-.nasatitle{
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.video{
-  display: block;
-  width: 100px;
-  aspect-ratio: 1/2;
-  display: flex;
-  width: 50%;
-  padding-left: 20px;
-  justify-content: right;
-  border-radius: 10px;
-}
-
-.one-container{
-  padding: 15px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 90vh;
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(95,15,180,0.8) 80%);
-}
-
-.one-container::-webkit-scrollbar-thumb{
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.one-container::-webkit-scrollbar{
-  background-color: black;
-  width: 10px;
-}
-
-.todo-container{
-  background-color: rgba(255, 255, 255, 0.125);
-  border-radius: 10px;
-  height: 230px;
-  margin-bottom: 10px;
-  display: flex;
-}
-
-.todo-add{
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: 10px;
-  padding: 10px;
-  /*width: 300px;*/
-  border-radius: 10px;
-  text-align: center;
-}
-
-.todo-add > button{
-  margin-top: 30px;
-  width: 70%;
-  height: 30%;
-  border-radius: 10px;
-  font-weight: bold;
-  background-color: rgb(95, 15, 180);
-  color: white;
-  transition: transform 0.15s;
-  transition: box-shadow 0.15s;
-}
-
-.todo-add > button:hover{
-  transform: translateY(-2px);
-  box-shadow: 0px 0px 40px -8px rgba(255,255,255,0.5);
-}
-
-.todos{
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  width: 1px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  flex: 1;
-  gap: 10px;
-  overflow-y: hidden;
-}
-
-.todos::-webkit-scrollbar-thumb{
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 5px;
-}
-
-.todos::-webkit-scrollbar{
-  background-color: black;
-  height: 5px;
-  border-radius: 2px;
-}
-
-.todos > div{
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  padding: 5px;
-  color: white;
-}
-
-.todo-add-inp > input{
-  background-color: rgba(255, 255, 255, 0.04);
-  border: none;
-  border-bottom: solid;
-  border-left: solid;
-  border-color: rgba(255, 255, 255, 1);
-  color: white;
-  transition: border-color 0.15s;
-  border-radius: 5px;
-  border-width: 1px;
-  width: 200px;
-  height: 30px;
-  margin-bottom: 5px;
-}
-
-.todo-add-inp{
-  text-align: center;
-  width: 300px;
-}
-
-.todo-add-inp > input:focus{
-  border-color: rgba(255, 255, 255, 0.9);
-  outline: none;
-}
-
-.todo-title{
-  font-weight: bold;
-}
-
-@media(max-width: 800px) {
-  .todo-title{
-    font-size: 2vw;
-  }
-  .todo-date{
-    font-size: 1.5vh;
-  }
-}
-
-@media(min-width: 801px) {
-  .todo-title{
-    font-size: 19px;
-  }
-
-  .todo-date{
-    font-size: 14px;
-  }
-}
-
-
-/*Two styles*/
-
-
-
-.two-home{
-  background: rgb(0,0,0);
-  background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
-  height: 250px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-}
-
-.two-toptitle{
-  font-size: 36px;
-  margin-top: 80px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.two-toptext{
-  font-size: 12px;
-  margin-left: 10px;
-  padding-top: 6px;
-  font-weight: 300;
-}
-
-.two-container{
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(0,0,0);
-  background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
-}
-
-.weather{
-  border: solid;
-  border-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  background: transparent;
-  backdrop-filter: blur(10px);
-}
-
-.weather > img{
-  margin-top: 25px;
-}
-
-.weather-date{
-  margin-top: 5px;
-}
-
-.weather-temp{
-  height: fit-content;
-  margin-top: 65px;
-}
-
-.weather-temprange{
-  margin-top: -5px;
-}
-
-.weather-container{
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 5px;
-  display: flex;
-  height: 250px;
-}
-
-
-
-/*Three styles*/
+/*Three styles {N/A}*/
 
 
 .three-home{

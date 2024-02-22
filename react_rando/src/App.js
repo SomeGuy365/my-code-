@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/home";
 import Second from "./pages/second"
+import Homecard from "./pages/Homecard"
 import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import './App.css'
@@ -13,11 +14,14 @@ import './App.css'
 function App() {
     return (
         <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/Home" element={<Home />} />
-                <Route path="/Second" element={<Second />} />
-            </Routes>
+            <div className="ovcontainer">
+                <Navbar />
+                <Routes>
+                    <Route path="/Home" element={<Home />} />
+                    <Route path="/Second" element={<Second />} />
+                    <Route path="/Homecard" element={<Homecard />} />
+                </Routes>
+            </div>
         </Router>
     );
 }

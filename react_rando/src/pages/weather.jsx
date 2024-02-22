@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import './home.css'
+import './weather.css'
 
 const Card = (props) => {
     let array = Array.from(props.fore)

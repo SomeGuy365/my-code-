@@ -1,14 +1,24 @@
 import React from "react";
-import './home.css'
+import './homecard.css'
 import ReactPlayer from 'react-player'
 import { useState,useEffect } from "react";
 
 const Card1 = ({prop}) => {
     const [todos,settodos] = useState([])
     const [renders,setrenders] = useState(0)
+    const [nasa, setnasa] = useState([])
+
+    const NASA_API = 'aNPUGKBJgz847fa29nRAkUe01yQlQeCl5Nb1EbIe'
     
     useEffect(fetchtodos,[renders])
     useEffect(fetchtodos,[])
+    useEffect(fectchNasa,[])
+
+    function fectchNasa() {
+        fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`)
+        .then(response => response.json())
+        .then(data => setnasa(data))
+      }
 
     function createTodo(title,duedate) {
         console.log(renders)
@@ -100,17 +110,17 @@ const Card1 = ({prop}) => {
                     ))}
                 </div>
             </div>
-            <div className="nasa-contain" style={{backgroundImage: `url(${prop.url})`,backgroundPosition: '25% 20%', backgroundSize: 'cover'}}>
+            <div className="nasa-contain" style={{backgroundImage: `url(${nasa.url})`,backgroundPosition: '25% 20%', backgroundSize: 'cover'}}>
                 <span className="nasatext">
                     <span className="nasatitle">
-                        {prop.title}
+                        {nasa.title}
                     </span><br />
-                    {prop.explanation}
+                    {nasa.explanation}
                 </span><br />
-                {prop.media_type === 'video'
+                {nasa.media_type === 'video'
                     ? (
                         <div className="video">
-                            <ReactPlayer url={prop.url} controls={false} muted={true} playing={true} width={400} height={250} />
+                            <ReactPlayer url={nasa.url} controls={false} muted={true} playing={true} width={400} height={250} />
                         </div>
                     ) : 
                     console.log()

@@ -1,0 +1,68 @@
+.two-home{
+    background: rgb(0,0,0);
+    background: linear-gradient(303deg, rgba(0,0,0,1) 0%, rgba(95,15,180,1) 90%);
+    height: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .two-toptitle{
+    font-size: 36px;
+    margin-top: 80px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .two-toptext{
+    font-size: 12px;
+    margin-left: 10px;
+    padding-top: 6px;
+    font-weight: 300;
+  }
+  
+  .two-container{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(344deg, rgb(0,0,0) 0%, rgba(40,146,215,0.8) 100%);
+  }
+  
+  .weather{
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background: transparent;
+    backdrop-filter: blur(10px);
+  }
+  
+  .weather > img{
+    margin-top: 25px;
+  }
+  
+  .weather-date{
+    margin-top: 5px;
+  }
+  
+  .weather-temp{
+    height: fit-content;
+    margin-top: 65px;
+  }
+  
+  .weather-temprange{
+    margin-top: -5px;
+  }
+  
+  .weather-container{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    height: 250px;
+  }
+  

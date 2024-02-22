@@ -11,6 +11,9 @@ function Navbar() {
             <NavLink to="/Second" activeStyle>
                         Blogs
             </NavLink>
+            <NavLink to="/homecard" activeStyle>
+                uhhhhhh
+            </NavLink>
         </div>
     )
 }
