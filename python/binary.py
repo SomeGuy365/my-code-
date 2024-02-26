@@ -1,6 +1,6 @@
 import math
 
-imp2 = input("num")
+imp2 = input("Enter a sentence")
 
 imp1 = 0
 
