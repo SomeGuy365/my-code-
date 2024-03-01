@@ -1,0 +1,16 @@
+a :
+9
+numone :
+100
+numfive :
+80
+numtwo :
+90
+numthree :
+80
+numfour :
+80
+a :
+18
+a :
+16
