@@ -17,7 +17,7 @@ def authenticate():
 
 
 def checkwin(u1, u2):
-    #algorithm stuff
+    #checks player cards and returns winner
     if u1[0] == u2[0]:
         if int(u1[1]) > int(u2[1]):
             return "u1"
@@ -176,4 +176,3 @@ while len(deck) > 0 and authenticated:
 #write to file and print top 5 from file if authenticated 
 if authenticated:
     fileprint(wincount)
-
