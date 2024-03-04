@@ -1,8 +1,8 @@
 import random
 import time
 
-users = ["bob","jim","mike","a"]
-passw = ["1967","brazil","ford","a"]
+users = ["bob","jim","mike","a","Tim123"]
+passw = ["1967","brazil","ford","a","pass124"]
 
 def authenticate():
     userinp = input("Enter your user:")
@@ -94,7 +94,7 @@ def fileprint(wincount):
                 #checks if current top 5 number
                 if int(line_list[((b*2)+1)-(count*2)]) == num and found == False:
 
-                    print(str(position) + ":" + line_list[(b*2)] + " " + str(num))                
+                    print(str(position) + ":" + line_list[(b*2)] + " " + str(num) + " Cards")                
                     line_list.remove(line_list[((b*2)+1)-(count*2)])
                     line_list.remove(line_list[b*2])
 
@@ -108,16 +108,15 @@ def fileprint(wincount):
 
 
 #deck initiation
-decktemplate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 deck = []
-
-for i in decktemplate:
+for i in range(1,11):
     deck.append("r" + str(i))
     deck.append("b" + str(i))
     deck.append("y" + str(i))
 random.shuffle(deck)
 
 print(len(deck))
+print(deck)
 
 #initial authentication
 authenticated = False
@@ -164,12 +163,14 @@ while len(deck) > 0 and authenticated:
         p2cards.append(p1card)
 
     #prints round winner
+    print(p1card + " : " + p2card)    
+
     if checkwin(p1card, p2card) == "u1":
         print("Player one wins round " + str(roundnum))
     else:
         print("Player two wins round " + str(roundnum))
 
-    time.sleep(0.8)
+    time.sleep(0.5)
     roundnum += 1
 
 
