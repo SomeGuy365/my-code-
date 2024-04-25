@@ -1,5 +1,6 @@
 import random
 import pygame
+import time
 
 from pygame.locals import (
     K_UP,
@@ -11,17 +12,17 @@ from pygame.locals import (
     QUIT,
 )
 
-SCREEN_WIDTH = 800
+SCREEN_WIDTH = 1000
 SCREEN_HIGHT = 600
 
 running = True
 pygame.init()
 
+fps = pygame.time.Clock()
+
 screen = pygame.display.set_mode([SCREEN_WIDTH,SCREEN_HIGHT])
 
 list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-
-print(list)
 
 def bubble():
     random.shuffle(list)
@@ -36,7 +37,6 @@ def bubble():
             if list[j] > list[j+1]:
                 list[j], list[j+1] = list[j+1], list[j]
             print(list[0])
-            barrect = pygame.Rect(200,400,width,list[0])
 
 def insertaiton_sort(list):
     for i in range(1,len(list)):
@@ -99,14 +99,36 @@ def quicksort2(array):
 
 
 
-heigth = 40
-width = 20
+HEIGHT = 8
+WIDTH = 8
+MARGIN = 4
+colour = (0,0,0)
+
+bars = []
+for a in range(100):
+    num = random.randint(1,100)
+    while num in bars:
+        num = random.randint(1,100)
+    bars.append(num)
 
 while running:
     screen.fill((255,255,255))
-    barrect = pygame.Rect(200,400,width,heigth)
-    pygame.draw.rect(screen,(0,0,0),barrect)
-    bubble()
+    for x in range(100):
+        for y in range(100):
+            if y == 10:
+                colour = (255,0,0)
+            pygame.draw.rect(screen,colour,[(MARGIN + WIDTH) * x + MARGIN,
+                                            (MARGIN + HEIGHT) * y + MARGIN,
+                                            WIDTH,
+                                            HEIGHT])
+    
+    for i in range(1,len(bars)):
+        key_index = bars[i]
+        j = i - 1
+        while j >= 0 and bars[j] > key_index:
+            bars[j + 1] = bars[j]
+            j -= 1
+        bars[j + 1] = key_index
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -114,8 +136,11 @@ while running:
         if event.type == KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                  running = False
+            if event.key == pygame.K_RIGHT:
+                bars[2] += 1
 
     pygame.display.update()
+    fps.tick(2)
     
 
 #while running:
