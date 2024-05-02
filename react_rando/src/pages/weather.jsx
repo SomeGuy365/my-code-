@@ -14,6 +14,7 @@ const Card = ({props}) => {
 
     }
 
+    //TODO:Fix API rendering(GGGGRRRRAAAAAAAAA)
 
     return (
         <div className="two-container">
