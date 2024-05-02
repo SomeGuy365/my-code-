@@ -30,6 +30,8 @@ WIDTH = 8
 MARGIN = 2
 colour = (0,0,0)
 
+movespeed = 8
+
 bars = []
 for a in range(100):
     num = random.randint(1,100)
@@ -83,7 +85,7 @@ def bubblesort():
                 t = bars[j]
                 bars[j] = bars[j + 1]
                 bars[j + 1] = t
-            tredraw(j+1,10)
+            tredraw(j+1,movespeed)
 
         if endcheck():
             break
@@ -98,7 +100,7 @@ def insertsort():
             j -= 1
             tredraw(j,0)
         bars[j + 1] = key_index
-        tredraw(j,10)
+        tredraw(j,movespeed)
 
         if endcheck():
             break       
@@ -115,7 +117,7 @@ def partition(array,low,high):
             i += 1
             (array[i], array[j]) = (array[j], array[i])
         temp = [i,j]
-        tredraw(temp,10)
+        tredraw(temp,movespeed)
     (array[i + 1], array[high]) = (array[high], array[i + 1])
 
     return i+1
@@ -126,7 +128,7 @@ def quicksort(array,low,high):
         pi = partition(array,low,high)
 
         quicksort(array,low,pi-1)
-        tredraw("None",10)
+        tredraw("None",movespeed)
         quicksort(array,pi+1,high)
 #-----------------------------------------------#
 
@@ -156,7 +158,7 @@ def countingSort(arr, exp1):
     i = 0
     for i in range(0, len(arr)):
         arr[i] = output[i]
-        tredraw(i,10)
+        tredraw(i,movespeed)
 
 def radixSort(arr):
     #max:largest num in unsorted array
@@ -171,6 +173,8 @@ def radixSort(arr):
 #-----------------------------------------------#
 
 #THE MAIN EVENT#
+bubble,insert,quick,radix = False,False,False,False
+
 execute = False
 while running:
     drawgrid(bars,"None","Nah")
@@ -180,10 +184,14 @@ while running:
         drawgrid(bars,"None","Nah")
         pygame.display.update()
     else:
-        #bubblesort()
-        #insertsort()
-        #quicksort(bars,0,len(bars)-1)
-        radixSort(bars)
+        if bubble:
+            bubblesort()
+        elif insert:
+            insertsort()
+        elif quick:
+            quicksort(bars,0,len(bars)-1)
+        elif radix:
+            radixSort(bars)
 
         execute = False
 
@@ -195,3 +203,11 @@ while running:
                  running = False
             if event.key == pygame.K_RIGHT:
                 execute = True
+            if event.key == pygame.K_z:
+                bubble = True
+            if event.key == pygame.K_x:
+                insert = True
+            if event.key == pygame.K_c:
+                quick = True
+            if event.key == pygame.K_v:
+                radix = True
