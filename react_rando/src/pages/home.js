@@ -1,6 +1,6 @@
 import './home.css';
 import { useState,useEffect } from 'react';
-import Homecard from './Homecard'
+import Homecard from './Homecard/Homecard'
 import WeatherCard from './weather'
 import homeicon from './pics/home2.svg'
 import weathericon from './pics/weather.svg'

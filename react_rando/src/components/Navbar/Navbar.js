@@ -9,7 +9,7 @@ function Navbar() {
                 Blogs
             </NavLink>
             <NavLink to="/Second" activeStyle>
-                        Blogs
+                Blogs
             </NavLink>
             <NavLink to="/homecard" activeStyle>
                 uhhhhhh
