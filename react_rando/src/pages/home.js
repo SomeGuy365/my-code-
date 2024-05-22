@@ -1,7 +1,7 @@
 import './home.css';
 import { useState,useEffect } from 'react';
 import Homecard from './Homecard/Homecard'
-import WeatherCard from './weather'
+import WeatherCard from './Weathercard/weather'
 import homeicon from './pics/home2.svg'
 import weathericon from './pics/weather.svg'
 import Filmcard from './filmcard'

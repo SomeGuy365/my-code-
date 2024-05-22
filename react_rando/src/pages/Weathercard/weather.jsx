@@ -4,27 +4,29 @@ import './weather.css'
 
 const Card = ({props}) => {
     //let array = Array.from(props.fore)
-    const [weather, setweather] = useState()
-    const [array, setarray] = useState([])
+    const [weather, setweather] = useState(null)
+    const [array, setarray] = useState()
 
     function fetchweather() {
-        fetch(`http://api.weatherapi.com/v1/current.json?key=ea0c3ac899f343c1b5e173401232509&q=Bristol&aqi=no`)
+        fetch(`http://api.weatherapi.com/v1/forecast.json?key=ea0c3ac899f343c1b5e173401232509&q=Bristol&days=7&aqi=no&alerts=no`)
         .then(response => response.json())
         .then(weather => setweather(weather))
+        console.log(weather)
 
     }
+
+    useEffect(()=>fetchweather(),[]) 
 
     //TODO:Fix API rendering(GGGGRRRRAAAAAAAAA)
 
     return (
         <div className="two-container">
-            yay
             <div className="two-home">
                 <div className="two-toptext">
                     Weather
                 </div>
-
-                {weather != null ? (
+                
+                {weather ? (
                     <div>
                     <div className="two-toptitle">
                     The weather is {weather.current.temp_c}°C
@@ -32,13 +34,13 @@ const Card = ({props}) => {
                     <span style={{fontSize: 14,marginLeft: 16}}>
                         And it is {weather.current.condition.text}
                     </span>
-                    </div> ): ()=>{fetchweather();setarray(Array.from(weather.forecast))}}
+                </div> ): (<div>Loading</div>)}
 
                 
             </div>
             <div className='weather-container'>
-            {array != null ?
-                array.map((e) => (
+            {weather ?
+                weather.forecast.forecastday.map((e) => (
                     <div className="weather">
                         <div className="weather-date">
                             {e.date}
@@ -51,7 +53,7 @@ const Card = ({props}) => {
                             {e.day.mintemp_c}-{e.day.maxtemp_c}
                         </span>
                     </div>
-                )) : (<div>uh oh</div>) }
+                )) : (<div>uh oh</div>)}
             </div>
             
         </div>

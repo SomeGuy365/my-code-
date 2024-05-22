@@ -5,9 +5,8 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./pages/home";
-import Second from "./pages/second"
 import Homecard from "./pages/Homecard/Homecard"
-import Weather from "./pages/weather"
+import Weather from "./pages/Weathercard/weather"
 import { NavLink } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import './App.css'
