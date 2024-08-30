@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import './homecard.css'
 import ReactPlayer from 'react-player'
 import { useState,useEffect } from "react";
@@ -7,6 +7,8 @@ const Card1 = ({prop}) => {
     const [todos,settodos] = useState([])
     const [renders,setrenders] = useState(0)
     const [nasa, setnasa] = useState([])
+    const [todo_title, settodo_title] = useState("")
+    const [todo_date, settodo_date] = useState("")
 
     const NASA_API = 'aNPUGKBJgz847fa29nRAkUe01yQlQeCl5Nb1EbIe'
     
@@ -44,6 +46,9 @@ const Card1 = ({prop}) => {
 
         const datepicker = document.getElementById('todo-date');
         const duedate = datepicker.value;
+
+        settodo_title("")
+        settodo_date("")
 
         if (todos.length > 7) {
             let temp = todos
@@ -96,8 +101,8 @@ const Card1 = ({prop}) => {
                 <div className="todo-add">
                     Got anything Todo?<br />
                     <div className="todo-add-inp">
-                        <input id="todo-title" placeholder="Title" /><br />
-                        <input id="todo-date" placeholder="Info" />
+                        <input id="todo-title" placeholder="Title" value={todo_title} onChange={(e)=>settodo_title(e.target.value)} /><br />
+                        <input id="todo-date" placeholder="Info" value={todo_date} onChange={(e)=>settodo_date(e.target.value)} />
                     </div>
                     <button onClick={addTodo}>Add Todo</button>
                 </div>

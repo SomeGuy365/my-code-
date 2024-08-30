@@ -2,12 +2,13 @@
 
 
 .one-home{
-    background: rgb(95,15,180);
-    background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(85, 221, 224) 92%);
+    /*background: rgb(95,15,180);
+    background: linear-gradient(145deg, rgb(95, 15, 180) 0%, rgb(45, 30, 65) 92%);*/
     height: 250px;
     margin-bottom: 10px;
     border-radius: 10px;
     padding: 8px;
+    color: white;
   }
   
 .one-toptext{
@@ -64,9 +65,9 @@
   margin: 10px;
   border-radius: 10px;
   background: rgb(0,0,0);
-  background: linear-gradient(45deg, rgb(0,0,0) 0%, rgba(95,15,180,0.8) 80%);
+  background: linear-gradient(0deg, rgb(18,18,18) 40%, rgba(75,15,160,1) 100%);
   font-family: 'Poppins', sans-serif;
-  flex: 1;
+  width: 100%;
 }
 
 .one-container::-webkit-scrollbar-thumb{

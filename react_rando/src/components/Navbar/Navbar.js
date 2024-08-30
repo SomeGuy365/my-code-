@@ -1,15 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css'
+import homepic from "./home.svg"
 
 function Navbar() {
     return (
         <div className="nav">
             <div className="sec-1">
 
-                <NavLink to="/Home" style={{color:"white",textDecoration: "none"}} activeStyle>
-                    <div className="nav-home">yay</div>
-                </NavLink>
+                <div className="nav-home">
+                    <NavLink to="/Home" style={{color:"white",textDecoration: "none"}} activeStyle>
+                        <img src={homepic} className="homepic" />
+                    </NavLink>
+                </div>
 
                 <div className="nav-weather">
                     <NavLink to="/Second" style={{color:"white",textDecoration: "none"}} activeStyle>
