@@ -6,6 +6,7 @@
     border-radius: 5px;
     margin: 2px;
     margin-top: 10px;
+    margin-left: 5px;
     width: 100%;
 }
 
@@ -28,14 +29,14 @@
 
 .sec-1 > div{
     aspect-ratio: 1/1;
-    background-color: #b3b3b3;
+    background-color: #121212;
     margin: 2px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 5px;
+    padding: 2px;
 }
 
 .sec-1 > div:hover {
@@ -43,6 +44,11 @@
 }
 
 .homepic{
-    width: 40px;
+    width: 30px;
+    height: 100%;
+}
+
+.weathpic {
+    width: 44px;
     height: 100%;
 }

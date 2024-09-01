@@ -99,7 +99,6 @@ const Card1 = ({prop}) => {
             </div>
             <div className="todo-container">
                 <div className="todo-add">
-                    Got anything Todo?<br />
                     <div className="todo-add-inp">
                         <input id="todo-title" placeholder="Title" value={todo_title} onChange={(e)=>settodo_title(e.target.value)} /><br />
                         <input id="todo-date" placeholder="Info" value={todo_date} onChange={(e)=>settodo_date(e.target.value)} />
@@ -108,7 +107,7 @@ const Card1 = ({prop}) => {
                 </div>
                 <div className="todos">
                     {todos.map((e)=>(
-                        <div>
+                        <div className="inditodo">
                             <div className="todo-title">{e.title}</div> 
                             <div className="todo-date">{e.duedate}</div>
                         </div>
