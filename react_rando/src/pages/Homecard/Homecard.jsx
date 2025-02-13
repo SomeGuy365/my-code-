@@ -58,7 +58,11 @@ const Card1 = ({prop}) => {
             console.log(todos)
         }
 
+        if (title.length > 0 && duedate.length > 0) {
         createTodo(title,duedate);
+        } else {
+            alert("Please enter information before adding!")
+        }
 
     }
 

@@ -5,7 +5,7 @@ import './weather.css'
 const Card = ({props}) => {
     //let array = Array.from(props.fore)
     const [weather, setweather] = useState(null)
-    const [array, setarray] = useState()
+
 
     function fetchweather() {
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=ea0c3ac899f343c1b5e173401232509&q=Bristol&days=7&aqi=no&alerts=no`)
@@ -17,8 +17,6 @@ const Card = ({props}) => {
 
     useEffect(()=>fetchweather(),[]) 
 
-    //TODO:Fix API rendering(GGGGRRRRAAAAAAAAA)
-
     return (
         <div className="two-container">
             <div className="two-home">
@@ -29,9 +27,9 @@ const Card = ({props}) => {
                 {weather ? (
                     <div>
                     <div className="two-toptitle">
-                    The weather is {weather.current.temp_c}°C
+                    The Temperature is {weather.current.temp_c}°C
                     </div>
-                    <span style={{fontSize: 14,marginLeft: 16}}>
+                    <span style={{fontSize: 14}}>
                         And it is {weather.current.condition.text}
                     </span>
                 </div> ): (<div>Loading</div>)}
@@ -47,10 +45,10 @@ const Card = ({props}) => {
                         </div>
                         <img src={e.day.condition.icon} />
                         <div className="weather-temp">
-                            {e.day.avgtemp_c}
+                            Average: {e.day.avgtemp_c}°C
                         </div>
                         <span className="weather-temprange">
-                            {e.day.mintemp_c}-{e.day.maxtemp_c}
+                            Range: {e.day.mintemp_c} - {e.day.maxtemp_c}°C
                         </span>
                     </div>
                 )) : (<div>uh oh</div>)}
